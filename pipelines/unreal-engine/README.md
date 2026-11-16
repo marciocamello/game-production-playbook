@@ -51,7 +51,19 @@ Import tested FBX/GLB assets; verify skeleton rest poses and root units. Retarge
 
 **T15 restoration and VFX:** [Niagara, Chaos and deterministic restoration](../../tutorials/niagara-chaos-deterministic-restoration.md) reuses T07's committed progression event and adds an [original three-piece animated presenter with an Editor-assigned Niagara component](../../examples/restoration-vfx/README.md). Chaos Cache is an optional cosmetic enhancement, never the source of world progression or blocking collision. Source publication does not establish Editor or packaged runtime validation.
 
+**T16 gameplay-safe cinematics:** [Sequencer, Gameplay Transitions and Cinematic Return](../../tutorials/sequencer-gameplay-cinematic-return.md) defines explicit start/skip/end/unload transitions for the existing controller and persistent state, with one idempotent return path.
+
+**T17 state-reactive audio:** [Reactive Music, Spatial Sound and Audio Rights](../../tutorials/reactive-music-spatial-audio-rights.md) projects T07's committed state onto licensed sources, spatial cues, loops and existing settings without replaying success stings on load.
+
 ## 07. Local verification
+
+**T18 verification layers:** [Native Tests, Editor Checks, Human PIE and Profiling](../../tutorials/native-tests-editor-pie-profiling.md) plus [original native T07 validation assertions](../../examples/native-validation-tests/README.md) distinguish code test results from asset/PIE/standalone and measured frame-time evidence.
+
+**T19 standalone delivery:** [Windows Packaging, Gameplay Capture and Release](../../tutorials/windows-packaging-gameplay-capture-release.md) uses the existing local build/packaging scripts and [read-only archive/video metadata inspection](../../examples/release-evidence/README.md); final release and playable packaged validation remain separate, human-run gates.
+
+**T20 public evidence:** [Glass Box, Provenance and Postmortem](../../tutorials/glass-box-provenance-postmortem.md) with [read-only artifact/hash/status verification](../../examples/glass-box-audit/README.md) provides a publication-ready, privacy-safe account of actual outcomes, not invented execution success.
+
+
 
 Run scoped C++ build, native tests, Editor asset compile/validation, human PIE, Windows cook/package and **fresh packaged launch** as separate checks. Check test-case results, not only process exit status. Re-run progress/save/streaming tests after changing Actor logic, UI or cinematic returns. Local script automation is permitted; **no GitHub Actions workflows** are created.
 
