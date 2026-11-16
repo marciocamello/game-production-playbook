@@ -7,6 +7,8 @@
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FGPPDemoProgressChanged);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FGPPDemoSaveCompleted, bool, bSucceeded);
+// Emitted only on a newly accepted donation; never on SaveGame load or projection.
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FGPPDemoBeaconRestored, FName, BeaconId);
 
 // Single-player in-memory progression authority. The pawn, ASC, actors and UI
 // are projections. Connect the real gameplay transactions to this subsystem.
@@ -18,6 +20,9 @@ class UGPPDemoRunSubsystem final : public UGameInstanceSubsystem
 public:
     UPROPERTY(BlueprintAssignable, Category = "Demo|Progress")
     FGPPDemoProgressChanged OnProgressChanged;
+
+    UPROPERTY(BlueprintAssignable, Category = "Demo|Progress")
+    FGPPDemoBeaconRestored OnBeaconRestored;
 
     UPROPERTY(BlueprintAssignable, Category = "Demo|Save")
     FGPPDemoSaveCompleted OnSaveCompleted;
