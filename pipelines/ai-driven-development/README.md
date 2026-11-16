@@ -18,6 +18,8 @@ Provider choice depends on capability, cost and available connector tools. Do no
 
 **Hands-on guide:** [T04 — Multi-Agent Game Production & Handoffs](../../tutorials/multi-agent-production-handoffs.md) shows real dependency planning, one Editor operator, artifact ownership and non-destructive conflict handling. Use its [ownership template](../../templates/artifact-ownership-matrix.md) and [read-only preflight example](../../examples/multi-agent-handoff/README.md) with an approved feature.
 
+**Complete public evidence guide:** [T20 — Glass Box, Provenance and Postmortem](../../tutorials/glass-box-provenance-postmortem.md) extends these agent/owner rules into verifiable human approvals, actual runtime test statuses, rights and a privacy-safe release history. Publication of a report never substitutes for human acceptance.
+
 ## Essential controls
 
 ### One writer, one Editor owner
