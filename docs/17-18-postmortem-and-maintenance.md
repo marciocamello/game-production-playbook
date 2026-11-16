@@ -2,6 +2,8 @@
 
 A useful postmortem distinguishes **intentions from evidence**, including work cut because it was no longer feasible.
 
+**Hands-on provenance and Glass Box:** [T20 — Evidence-Based Glass Box and Postmortem](../tutorials/glass-box-provenance-postmortem.md) provides the real reporting contract and a [read-only Python SHA-256/status audit](../examples/glass-box-audit/README.md) for actual local evidence files. A valid manifest hash is not proof that a game passed human acceptance.
+
 ## Historical reconstruction
 
 Maintain a dated timeline containing: initial constraints, concept choices, GDD/TDD approvals, feature specification creation, actual editor/source execution, owner handoffs, known failures, playtest observations, commits, packaged builds, release events and omissions. A design document created on a given date cannot by itself prove implementation happened that day.
