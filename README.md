@@ -32,11 +32,13 @@ All three use the **same gates**: approved intent → design → executable spec
 14. [T06 — Contextual interactions, fragments and voluntary sacrifice](tutorials/contextual-interactions-pickups-sacrifices.md)
 15. [T07 — SaveGame, Reload and World Partition](tutorials/savegame-reload-world-partition.md)
 16. [T08 — Camera rigs, occlusion and Enhanced Input](tutorials/camera-rigs-occlusion-enhanced-input.md)
-17. [Original versioned SaveGame A/B C++ and inspection tool](examples/savegame-ab/README.md)
-18. [Light ability and T08 camera/sprint C++ example](examples/gas-light-demo/README.md)
-19. [Real local build/packaging PowerShell examples](examples/unreal-local-build/README.md)
-20. [Read-only Git preflight and multi-agent example](examples/multi-agent-handoff/README.md)
-21. [Templates and reusable checklists](templates/README.md)
+17. [T09 — UMG/MVVM HUD, menus, settings and loading boundaries](tutorials/umg-mvvm-hud-menus-settings-loading.md)
+18. [Original UMG/MVVM native HUD and menu example](examples/umg-mvvm-demo/README.md)
+19. [Original versioned SaveGame A/B C++ and inspection tool](examples/savegame-ab/README.md)
+20. [Light ability and T08 camera/sprint C++ example](examples/gas-light-demo/README.md)
+21. [Real local build/packaging PowerShell examples](examples/unreal-local-build/README.md)
+22. [Read-only Git preflight and multi-agent example](examples/multi-agent-handoff/README.md)
+23. [Templates and reusable checklists](templates/README.md)
 
 ## Production chapters
 

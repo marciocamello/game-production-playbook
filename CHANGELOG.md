@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-16 — T09: UMG/MVVM HUD, functional menus and persisted settings
+
+- Published [T09 — UMG/MVVM HUD, Menus, Settings and Loading Boundaries](tutorials/umg-mvvm-hud-menus-settings-loading.md) with an explicit six-WBP Editor wiring plan, 27 real acceptance cases and detailed false-success prevention for Save/Continue.
+- Added an [original four-file C++ HUD ViewModel and PlayerController implementation](examples/umg-mvvm-demo/README.md) with FieldNotify updates from the existing T07 run events, New Game, pause/resume, async Save feedback, current mapped controls and native user settings for graphics/VSync, sound class volume and subtitles.
+- Reused the existing T05/T08 Character and T07 subsystem rather than introducing duplicate gameplay state. A complete Continue/Load coordinator remains unimplemented and is **not** presented as a working button.
+- Updated canonical navigation, Unreal pipeline and UI chapter. No stubs, copied private source, GitHub Actions or fabricated test results were added.
+- **Execution boundary:** source has not been compiled, Widget Blueprints have not been authored in a live UE Editor, and no PIE, settings fresh-process or packaged validation was performed by the playbook. Results remain NOT RUN.
+
 ## 2026-11-16 — T08: elevated camera, real zoom/sprint and collision diagnosis
 
 - Published [T08 — Camera Rigs, Occlusion and Enhanced Input](tutorials/camera-rigs-occlusion-enhanced-input.md) with practical Spring Arm and Gameplay Cameras approaches, explicit Camera Asset authoring, collision debugging and 25 separate acceptance scenarios.

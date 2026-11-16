@@ -39,6 +39,8 @@ Create UMG widgets bound to real native ViewModels, command APIs and input setti
 
 **T08 camera and input tutorial:** [Camera Rigs, Occlusion & Enhanced Input](../../tutorials/camera-rigs-occlusion-enhanced-input.md) extends the **existing** [T05 Character](../../examples/gas-light-demo/README.md) with optional Zoom/Sprint Input Actions, frame-rate-independent boom interpolation, `ECC_Camera` collision telemetry and camera-return checks. It also documents the experimental Gameplay Cameras Camera Asset route as an alternative, without claiming the Editor asset exists until it is authored and tested.
 
+**T09 functional HUD and menus:** [UMG/MVVM — HUD, Menus, Settings and Loading Boundaries](../../tutorials/umg-mvvm-hud-menus-settings-loading.md) provides a [four-file native MVVM and PlayerController example](../../examples/umg-mvvm-demo/README.md) reusing T07 progress/save events. Actual UMG assets, audio routing and Continue world restoration require explicit Editor integration and tests; do not claim success based on source alone.
+
 ## 06. Animation, audio, VFX and cinematic integration
 
 Import tested FBX/GLB assets; verify skeleton rest poses and root units. Retarget and author animation graphs using supported Editor tools. Drive Niagara, sound, Sequencer and Chaos-assisted visuals from committed gameplay state, not as progression authorities. Keep bridge/fountain collisions deterministic and safe after skipped effects.

@@ -2,6 +2,8 @@
 
 ## Player interface and MVVM
 
+**Hands-on tutorial:** [T09 — UMG/MVVM, HUD, Menus, Settings and Loading Boundaries](../tutorials/umg-mvvm-hud-menus-settings-loading.md), with a real source-level [HUD ViewModel and operational UI Controller example](../examples/umg-mvvm-demo/README.md) and an explicit checklist for required Editor-authored widgets, persistent settings and truthful Save/Continue outcomes.
+
 The UI communicates **real** state; it must not own progression truth.
 
 - Main menu: New Game, Continue (only if a validated saved session exists), Options, Controls and Quit as appropriate.
