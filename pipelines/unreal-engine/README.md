@@ -29,6 +29,8 @@ For streaming worlds, give progression-critical Actors stable IDs, commit state 
 
 **T13 verified import and gameplay-aware Actor integration:** [Unreal Static Mesh Import, Materials, Collision and Actors](../../tutorials/unreal-static-mesh-import-integration.md) includes a [guarded one-FBX Editor Python import](../../examples/unreal-import-static-mesh/README.md). Imported `.uasset` existence never substitutes for verified material, collision, Actor wiring or PIE.
 
+**T14 authored level and Geometry Script:** [Level Design, Modeling Mode and Geometry Script](../../tutorials/level-design-modeling-mode-geometry-script.md) with an optional [seven-Actor collision-bearing Unreal Editor blockout](../../examples/level-blockout/README.md). This creates authored structural geometry only when executed; the actual gameplay gate and persistence remain independent authorities.
+
 ## 04. Spatial and art integration
 
 Approve visual concepts and spatial blockout reference before large-scale scene authoring when the style/route matters. Build actual paths with Modeling Mode, static meshes, collisions and checkpoints. Preserve gameplay Actors while refining scenery. Use Geometry Script and reusable materials for controlled geometric detail; PCG, Water, Nanite and Mesh Terrain are optional engineering choices subject to benefit, compatibility and release safety.

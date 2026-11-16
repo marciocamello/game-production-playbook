@@ -14,6 +14,8 @@
 
 The Unmade's visual direction distinguished **an intentionally incomplete city** from arbitrary ruins. Gothic forms, missing plates, restrained inner cyan light and later warm life connected the protagonist to architecture. This art choice also created clear functional requirements: a restored bridge must actually become walkable.
 
+**Playable spatial production tutorial:** [T14 — Level Design, Modeling Mode and Geometry Script](../tutorials/level-design-modeling-mode-geometry-script.md) includes a [guarded Editor blockout generator](../examples/level-blockout/README.md), practical Modeling Mode/Geometry Script authoring, camera/capsule checks and a 25-case acceptance matrix.
+
 ## 08. Spatial design and blockout
 
 Create a route diagram and a scale-aware spatial reference before authoring final geometry. Record landmark order, elevations, sightlines, entrances, exits, gate conditions, recovery routes, one-way changes, checkpoints and camera occlusion.

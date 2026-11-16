@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-16 — T14: level design, Modeling Mode and Geometry Script
+
+- Published [T14](tutorials/level-design-modeling-mode-geometry-script.md), with a real route dependency contract, Modeling Mode and Geometry Script authoring, World Partition/Actor ownership guidance and 25 distinct gameplay/asset acceptance scenarios.
+- Added a [guarded Unreal Editor Python blockout author](examples/level-blockout/README.md) for seven actual structural StaticMeshActors in an approved existing map, with wrong-map/duplicate-prefix refusal and no automated deletion/save-all.
+- Updated main navigation, tutorial roadmap, Unreal pipeline and spatial design chapter. No fake gameplay gates, copied private level data or GitHub Actions.
+- **Runtime status:** the authored source has not been executed in a UE 5.9 Editor. Real map generation, collision, gameplay state, PIE, World Partition, cook/package and human acceptance remain NOT RUN.
+
+
 ## 2026-11-16 — T13: Unreal FBX import and real actor/material/collision integration
 
 - Published [T13](tutorials/unreal-static-mesh-import-integration.md), covering Unreal 5.9 Content Browser/FBX import, dimensions, UVs, Material Instances, simple/UCX collision and stable Actor ownership.
