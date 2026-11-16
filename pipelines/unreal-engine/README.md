@@ -49,6 +49,8 @@ Create UMG widgets bound to real native ViewModels, command APIs and input setti
 
 Import tested FBX/GLB assets; verify skeleton rest poses and root units. Retarget and author animation graphs using supported Editor tools. Drive Niagara, sound, Sequencer and Chaos-assisted visuals from committed gameplay state, not as progression authorities. Keep bridge/fountain collisions deterministic and safe after skipped effects.
 
+**T15 restoration and VFX:** [Niagara, Chaos and deterministic restoration](../../tutorials/niagara-chaos-deterministic-restoration.md) reuses T07's committed progression event and adds an [original three-piece animated presenter with an Editor-assigned Niagara component](../../examples/restoration-vfx/README.md). Chaos Cache is an optional cosmetic enhancement, never the source of world progression or blocking collision. Source publication does not establish Editor or packaged runtime validation.
+
 ## 07. Local verification
 
 Run scoped C++ build, native tests, Editor asset compile/validation, human PIE, Windows cook/package and **fresh packaged launch** as separate checks. Check test-case results, not only process exit status. Re-run progress/save/streaming tests after changing Actor logic, UI or cinematic returns. Local script automation is permitted; **no GitHub Actions workflows** are created.
