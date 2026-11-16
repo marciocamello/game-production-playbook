@@ -9,7 +9,7 @@
 | File | Real behavior |
 | --- | --- |
 | [`GPPDemoRunSaveGame.h`](Source/GPPDemoRunSaveGame.h) | UHT-reflected `USaveGame` class, versioned snapshot, fragment IDs, powered beacon ID, Light stage and safe-checkpoint candidate |
-| [`GPPDemoRunSubsystem.h`](Source/GPPDemoRunSubsystem.h) | GameInstance subsystem API, owner of logical transitions, progress and save-completion delegates |
+| [`GPPDemoRunSubsystem.h`](Source/GPPDemoRunSubsystem.h) | GameInstance subsystem API, owner of logical transitions, progress, one-shot fresh-restoration event and save-completion delegates |
 | [`GPPDemoRunSubsystem.cpp`](Source/GPPDemoRunSubsystem.cpp) | Real validation, nonduplicating stage changes, async A/B save, readback checks, highest-valid-generation load and error handling |
 | [`Inspect-SaveSlots.ps1`](scripts/Inspect-SaveSlots.ps1) | Read-only PowerShell 7 inspection: file presence, size, UTC timestamp and SHA-256 |
 
@@ -18,6 +18,8 @@ There is **no empty `.cpp` file** for the data-only SaveGame class; all its refl
 All educational code here is offered under the repository's [MIT code license](../../LICENSE-CODE.md). No private gameplay source, proprietary Unreal Engine source or binary Unreal content is shipped.
 
 ## Scope and boundary of the example
+
+**T15 extension:** `OnBeaconRestored(BeaconId)` is broadcast only after a newly successful `TryDonateLight`, after `OnProgressChanged`. It is **not** broadcast on a SaveGame load, New Game or progress projection; the [T15 VFX presenter](../restoration-vfx/README.md) listens to it for one-shot animation, while state/collision continue to derive from `IsBeaconPowered`.
 
 **Implemented in the provided C++ source:** NewRun logical initialization; unique Offering collection; one permanent Light donation to a named beacon; unique Recovery collection and stage change; checkpoint value recording; field and state validation; two alternating SaveGame slots; async save callback with readback and generation verification; a logical load selector; state-change notifications.
 
