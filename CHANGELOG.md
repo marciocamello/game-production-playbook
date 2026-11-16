@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-16 — T02: real local Unreal builds and packages
+
+- Published [T02 — Unreal Engine 5.9 project bootstrap and local build pipeline](tutorials/unreal-project-bootstrap-local-build.md).
+- Added actual reusable PowerShell wrappers for Engine/project preflight, `Build.bat` Editor compilation and `RunUAT.bat BuildCookRun` Windows packaging in [examples/unreal-local-build/](examples/unreal-local-build/README.md).
+- Enforced explicit version/target checks and unique package archives; no GitHub Actions or private machine paths.
+- Linked the tutorial and scripts from the main index, tutorial roadmap and Unreal Engine pipeline.
+- **Execution note:** wrappers are published as real commands but were not run against a live Windows Unreal 5.9 installation by this repository; build, PIE and packaged-game results remain unverified.
+
 ## 2026-11-16 — Practical tutorial series started
 
 - Published the [20-topic technical tutorial roadmap](tutorials/README.md), differentiating authored guidance from topics not yet authored.

@@ -9,7 +9,7 @@ This is the **implementation-oriented companion** to the [197-step production ro
 | ID | Tutorial | Concrete learning outcome | Documentation status |
 | --- | --- | --- | --- |
 | T01 | [Unreal Engine 5.9 MCP: connect, discover, author, verify](unreal-mcp-5-9.md) | Safely connect to the correct Editor and complete a real, saved lighting edit with explicit evidence | **Published** |
-| T02 | Unreal project bootstrap and local build pipeline | Configure a real C++/Blueprint project, dependencies and first standalone target without hosted CI | Not yet authored |
+| T02 | [Unreal Engine 5.9 project bootstrap and local build pipeline](unreal-project-bootstrap-local-build.md) | Configure a real C++/Blueprint project, compile an Editor target, package a Win64 executable and verify separate launch using [local scripts](../examples/unreal-local-build/README.md) | **Published** |
 | T03 | From game concept to GDD, technical design and executable SDD | Produce approved designs and one independently verifiable gameplay feature contract | Not yet authored |
 | T04 | Agent orchestration, file ownership and Editor handoffs | Execute multiple nonconflicting source, art and Editor workstreams without losing asset changes | Not yet authored |
 | T05 | Gameplay C++: state, Gameplay Tags and GAS | Implement a real input-driven ability and a durable state transition | Not yet authored |

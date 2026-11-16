@@ -25,7 +25,9 @@ All three use the **same gates**: approved intent → design → executable spec
 7. [The Unmade: historical case study](case-studies/the-unmade/README.md)
 8. [Practical tutorials: 20 hands-on topics](tutorials/README.md)
 9. [T01 — Unreal Engine 5.9 MCP tutorial](tutorials/unreal-mcp-5-9.md)
-10. [Templates and reusable checklists](templates/README.md)
+10. [T02 — Unreal project bootstrap and local Windows build](tutorials/unreal-project-bootstrap-local-build.md)
+11. [Real local build/packaging PowerShell examples](examples/unreal-local-build/README.md)
+12. [Templates and reusable checklists](templates/README.md)
 
 ## Production chapters
 
