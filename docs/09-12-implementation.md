@@ -6,6 +6,8 @@ Use the approved technical design to implement one player action whose outcome c
 
 Before adding a new component, locate and reuse the existing ability, input, interaction, save, actor and UI APIs. Implement targeted native tests and integration evidence. Never claim that a C++ test proves the player can see or reach an object.
 
+**Concrete Blender exercise:** [T11 — Real modular meshes, UV/PBR and FBX export](../tutorials/blender-modeling-uv-pbr-export.md) and [Blender Python source](../examples/blender-modular-kit/README.md). Verify actual generated Blender/FBX artifacts and Unreal imports separately.
+
 ## 10. Produce and validate 3D assets
 
 Choose the cheapest tool producing **usable geometry**, not the greatest number of attractive renders. Editor Modeling Mode can build modular walls; Blender can create or fix topology, UVs, pivots, rigs and exports; Tripo/Meshy can generate candidate meshes needing inspection.

@@ -8,6 +8,8 @@ A valid asset brief identifies the actual gameplay purpose, approved reference v
 
 Keep source models, raw generator downloads, processed exports and target Unreal packages clearly separated. Do not fabricate files or create empty folders simply to satisfy a naming pattern.
 
+**Runnable modeling tutorial:** [T11 — Blender Modeling, Retopology, UV and PBR](../../tutorials/blender-modeling-uv-pbr-export.md) includes a [real three-mesh modular generator and checksum manifest](../../examples/blender-modular-kit/README.md). Its source is published, but Blender execution and actual Unreal import remain NOT RUN until performed.
+
 ## 02. Modeling and cleanup
 
 - Audit generated/source mesh: disconnected objects, geometry intersections, normal direction, thin/degenerate surfaces, scale and bounding box.

@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-16 — T11: Blender modular modeling, UV and PBR
+
+- Published [T11](tutorials/blender-modeling-uv-pbr-export.md) with modeling cleanup, topology/UV/PBR rules, measured import scale and 15 concrete QA cases.
+- Added [original Blender Python modular-kit builder](examples/blender-modular-kit/README.md) that creates actual floor/wall/pillar geometry, unwraps UVs, applies PBR parameters and exports three FBX files with a manifest when run.
+- Script requires an isolated background Blender process and refuses existing output directories. No source art, existing files or GitHub Actions are overwritten.
+- Updated the tutorial index, Blender pipeline and implementation chapter. Blender execution, FBX contents, Unreal import, PIE and packaging remain NOT RUN.
+
+
 ## 2026-11-16 — T10: art-direction contracts and generation-ready briefs
 
 - Published [T10](tutorials/visual-references-generation-ready-briefs.md), with human-selected style bibles, rights-cleared multi-view references, technical Blender/Unreal briefs, a 12-case acceptance matrix and failure recovery.
