@@ -2,6 +2,8 @@
 
 This is a **reference process**, not an assertion that all work was performed in The Unmade. Use it to define your own project scope. Many steps can be combined; some engine-specific steps can be omitted when unnecessary. A missing optional tool never means that a required gameplay behavior can be faked.
 
+**Complete guided companion:** The [20 published practical tutorials](../tutorials/README.md) cover Editor/MCP, design, C++/GAS, interaction, persistence, cameras, UI, 3D assets, VFX, Sequencer, audio, QA, packaging and evidence-based postmortem. Publication is not proof that any game exercised the tutorial in runtime.
+
 **Task execution:** each relevant step produces a concrete deliverable, an identified owner, acceptance criteria, failures/risks, and traceable evidence. For every historical case, distinguish `Planned`, `In Progress`, `Implemented`, `Tested`, `Human Validated`, and `Released`.
 
 **Mode independence:** a human, a human assisted by AI, or a tool-using agent may execute a task. Ownership and verification gates do not change.
