@@ -27,6 +27,8 @@ Required source-asset checks:
 
 For native Unreal static meshes, a verified Editor FBX export/reimport is a meaningful transfer test, but it does not replace Tripo generation, Blender revision or packaged runtime validation.
 
+**T12 full character workflow:** [Rigging, Animation and IK Retargeting](../tutorials/character-rigging-animation-retarget.md), with [real source-rig inspection code](../examples/blender-rig-audit/README.md). Matching bone names alone does not validate bind/rest pose compatibility.
+
 ## 11. Character and motion production
 
 Start from a consistent multiview character reference and a neutral riggable pose. Check bone parents, local axes, bind/rest pose and deformation. Reusing **bone names** across four characters does not guarantee they share identical rest pose or one interchangeable skeleton.

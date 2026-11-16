@@ -36,13 +36,15 @@ All three use the **same gates**: approved intent → design → executable spec
 18. [T10 — Visual references and generation-ready asset briefs](tutorials/visual-references-generation-ready-briefs.md)
 19. [T11 — Blender modeling, retopology, UV/PBR and real FBX export](tutorials/blender-modeling-uv-pbr-export.md)
 20. [Blender modular stone kit Python generator](examples/blender-modular-kit/README.md)
-21. [Original UMG/MVVM native HUD and menu example](examples/umg-mvvm-demo/README.md)
-22. [Original versioned SaveGame A/B C++ and inspection tool](examples/savegame-ab/README.md)
-23. [Light ability and T08 camera/sprint C++ example](examples/gas-light-demo/README.md)
-24. [Original worked art-production brief](examples/visual-art-brief/README.md)
-25. [Real local build/packaging PowerShell examples](examples/unreal-local-build/README.md)
-26. [Read-only Git preflight and multi-agent example](examples/multi-agent-handoff/README.md)
-27. [Templates and reusable checklists](templates/README.md)
+21. [T12 — Character rigging, animation and Unreal IK retargeting](tutorials/character-rigging-animation-retarget.md)
+22. [Blender existing-rig rest pose and animation audit](examples/blender-rig-audit/README.md)
+23. [Original UMG/MVVM native HUD and menu example](examples/umg-mvvm-demo/README.md)
+24. [Original versioned SaveGame A/B C++ and inspection tool](examples/savegame-ab/README.md)
+25. [Light ability and T08 camera/sprint C++ example](examples/gas-light-demo/README.md)
+26. [Original worked art-production brief](examples/visual-art-brief/README.md)
+27. [Real local build/packaging PowerShell examples](examples/unreal-local-build/README.md)
+28. [Read-only Git preflight and multi-agent example](examples/multi-agent-handoff/README.md)
+29. [Templates and reusable checklists](templates/README.md)
 
 ## Production chapters
 

@@ -18,6 +18,8 @@ Keep source models, raw generator downloads, processed exports and target Unreal
 - Validate PBR map color space: base color/emission generally color data; normals, metallic, roughness and AO generally linear data. Verify the **actual source map encoding**, not only a filename.
 - For modular architecture, validate compatible pivots, bounds and one-to-one broken/restored positional alignment.
 
+**T12 rigging/IK retarget tutorial:** [Character Rigging, Animation and Unreal IK Retargeting](../../tutorials/character-rigging-animation-retarget.md) includes an [original read-only Blender rig audit](../../examples/blender-rig-audit/README.md) comparing bone hierarchy/rest pose and sampling real animations before separate Unreal retarget validation.
+
 ## 03. Rigging and animation
 
 - Agree on reference pose, axis, bone hierarchy, bone naming and handedness.

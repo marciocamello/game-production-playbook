@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-16 — T12: source rig audit and Unreal animation retargeting
+
+- Published [T12](tutorials/character-rigging-animation-retarget.md), covering rest pose and hierarchy compatibility, separate skeletal-mesh/animation-only FBX import, IK Rig/Retargeter and real AnimBP/PIE gates.
+- Added a [read-only Blender audit script](examples/blender-rig-audit/README.md) for a real existing armature/mesh, optional rest-matrix comparison, vertex weighting, active Action samples and a new non-overwriting JSON report.
+- Updated main navigation, tutorial index, Blender pipeline and implementation chapter. No fictional rigs, empty animation clips, GitHub Actions or private source art were added.
+- Real Blender input audit, Unreal imports/Retargeter, human deformation review and packaged-game checks remain NOT RUN.
+
+
 ## 2026-11-16 — T11: Blender modular modeling, UV and PBR
 
 - Published [T11](tutorials/blender-modeling-uv-pbr-export.md) with modeling cleanup, topology/UV/PBR rules, measured import scale and 15 concrete QA cases.
