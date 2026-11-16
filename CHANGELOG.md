@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-16 — T05: real GAS gameplay source and manual integration checks
+
+- Published [T05 — Gameplay C++, Gameplay Tags and GAS](tutorials/gameplay-gas-tags-light.md), with a precise native ability lifecycle, derived Gameplay Tag blocking, in-session donation/recovery and human PIE acceptance cases.
+- Added [original eight-file C++ GAS Light example](examples/gas-light-demo/README.md), including a native PointLight ability, elevated single-player Character, real Enhanced Input binding handlers and a light-powered world beacon.
+- Linked the tutorial and source from canonical navigation and Unreal Engine pipeline. Source is MIT-designated original educational code, not a copy of any private game's implementation.
+- **Execution boundary:** Example code was authored and documented, but not compiled, Editor-integrated, tested in PIE or packaged on an installed UE 5.9 machine in this publication. SaveGame/streaming, multiplayer, hold-confirm interaction, distinct pickup and user settings are out of the tutorial's narrow scope.
+- No unrelated code, private absolute paths or GitHub Actions.
+
 ## 2026-11-16 — T04: multi-agent ownership, bounded parallelism and Editor handoffs
 
 - Published [T04 — Multi-Agent Game Production](tutorials/multi-agent-production-handoffs.md) with explicit dependencies, one-writer-per-asset rules, exclusive Unreal Editor/MCP ownership, safe dirty-package transfer, handoff evidence and human acceptance.

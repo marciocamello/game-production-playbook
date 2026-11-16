@@ -28,9 +28,11 @@ All three use the **same gates**: approved intent → design → executable spec
 10. [T02 — Unreal project bootstrap and local Windows build](tutorials/unreal-project-bootstrap-local-build.md)
 11. [T03 — From concept to GDD, TDD and executable SDD](tutorials/concept-to-gdd-tdd-executable-sdd.md)
 12. [T04 — Multi-agent ownership and Unreal Editor handoffs](tutorials/multi-agent-production-handoffs.md)
-13. [Real local build/packaging PowerShell examples](examples/unreal-local-build/README.md)
-14. [Read-only Git preflight and multi-agent example](examples/multi-agent-handoff/README.md)
-15. [Templates and reusable checklists](templates/README.md)
+13. [T05 — Gameplay C++, Gameplay Tags and GAS](tutorials/gameplay-gas-tags-light.md)
+14. [Light ability: original C++ GAS implementation example](examples/gas-light-demo/README.md)
+15. [Real local build/packaging PowerShell examples](examples/unreal-local-build/README.md)
+16. [Read-only Git preflight and multi-agent example](examples/multi-agent-handoff/README.md)
+17. [Templates and reusable checklists](templates/README.md)
 
 ## Production chapters
 

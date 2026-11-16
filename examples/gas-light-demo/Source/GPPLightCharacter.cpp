@@ -157,8 +157,8 @@ void AGPPLightCharacter::ActivateLight()
     }
 
     const bool bAttempted = AbilitySystem->TryActivateAbilityByClass(UGPPLightAbility::StaticClass(), false);
-    UE_LOG(LogGPPLightExample, Display, TEXT("GAS Light activation attempted: %s"),
-        bAttempted ? TEXT("accepted") : TEXT("rejected"));
+    UE_LOG(LogGPPLightExample, Display, TEXT("GAS Light activation request: %s"),
+        bAttempted ? TEXT("attempted; verify actual light") : TEXT("rejected"));
 }
 
 void AGPPLightCharacter::TogglePersonalLight()
