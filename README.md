@@ -39,6 +39,8 @@ All three use the **same gates**: approved intent → design → executable spec
 21. [T12 — Character rigging, animation and Unreal IK retargeting](tutorials/character-rigging-animation-retarget.md)
 22. [T13 — Unreal Static Mesh import, materials and Actor integration](tutorials/unreal-static-mesh-import-integration.md)
 23. [T14 — Level design, Modeling Mode and Geometry Script](tutorials/level-design-modeling-mode-geometry-script.md)
+24. [T15 — Niagara, Chaos and deterministic restoration](tutorials/niagara-chaos-deterministic-restoration.md)
+25. [Original state-driven restoration VFX C++ source](examples/restoration-vfx/README.md)
 24. [Guarded Unreal Editor blockout authoring script](examples/level-blockout/README.md)
 25. [Guarded Unreal Editor Python FBX importer](examples/unreal-import-static-mesh/README.md)
 26. [Blender existing-rig rest pose and animation audit](examples/blender-rig-audit/README.md)
