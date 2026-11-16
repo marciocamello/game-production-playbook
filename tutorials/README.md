@@ -23,11 +23,11 @@ This is the **implementation-oriented companion** to the [197-step production ro
 | T13 | [Unreal Static Mesh import, actor/material integration and collision](unreal-static-mesh-import-integration.md) | Use a [guarded Editor Python FBX import](../examples/unreal-import-static-mesh/README.md) and verify saved meshes, PBR material slots, real collision and gameplay-safe Actor integration | **Published** |
 | T14 | [Level design, Modeling Mode and Geometry Script](level-design-modeling-mode-geometry-script.md) | Author a [guarded seven-Actor real blockout](../examples/level-blockout/README.md) and execute Modeling Mode/Geometry Script authoring with capsule, camera and progression collision checks | **Published** |
 | T15 | [Niagara, Chaos and deterministic restoration](niagara-chaos-deterministic-restoration.md) | Reuse T07 fresh-commit events with a [three-piece native animation and Niagara component](../examples/restoration-vfx/README.md), optional Chaos presentation and 29 separate acceptance checks | **Published** |
-| T16 | Sequencer, gameplay transitions and cinematic return | Run an interruptible story beat and restore correct player control | Not yet authored |
-| T17 | Reactive music, spatial sound and audio rights | Drive audible gameplay feedback from committed events and verify licensing | Not yet authored |
-| T18 | Native tests, Editor checks, human PIE and profiling | Run distinct validation layers and log failed or unrun checks accurately | Not yet authored |
-| T19 | Windows packaging, real gameplay capture and release | Produce, launch, test and publish a downloadable standalone build | Not yet authored |
-| T20 | Glass Box, provenance and evidence-based postmortem | Publish a privacy-safe record of decisions, AI use, assets, failures and scope cuts | Not yet authored |
+| T16 | [Sequencer, gameplay transitions and cinematic return](sequencer-gameplay-cinematic-return.md) | Implement a real Level Sequence camera handoff, skip, idempotent input/camera cleanup and 26 acceptance checks | **Published** |
+| T17 | [Reactive music, spatial sound and audio rights](reactive-music-spatial-audio-rights.md) | Author actual SoundWave/MetaSound and attenuation assets, bind committed events and verify audio rights with 28 checks | **Published** |
+| T18 | [Native tests, Editor checks, human PIE and profiling](native-tests-editor-pie-profiling.md) | Add [eight real T07 snapshot assertions](../examples/native-validation-tests/README.md), verify native/Editor/PIE/packaging layers and profile measured gameplay | **Published** |
+| T19 | [Windows packaging, real gameplay capture and release](windows-packaging-gameplay-capture-release.md) | Reuse T02 Windows build/package and a [read-only archive/video inspector](../examples/release-evidence/README.md) with real launch/capture/release gates | **Published** |
+| T20 | [Glass Box, provenance and evidence-based postmortem](glass-box-provenance-postmortem.md) | Publish a real evidence-led Glass Box and use [read-only file/hash/status auditing](../examples/glass-box-audit/README.md) with privacy-safe postmortem | **Published** |
 
 ## How to use the series
 
