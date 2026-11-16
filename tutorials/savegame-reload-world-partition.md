@@ -50,6 +50,8 @@ The most important distinction is:
 
 **`Deserialize` changes memory. `ApplyState` makes the world consistent. `PlayTransition` is only for a freshly committed player action.**
 
+The [T15 restoration presenter](niagara-chaos-deterministic-restoration.md) makes this separation concrete: the existing T07 run subsystem now emits `OnBeaconRestored` **only** from a successful new donation. Its existing `OnProgressChanged` continues to broadcast on new runs and logical loads and is only used to project authoritative state, never to replay Niagara/Chaos. This extension does not implement the still-required real world-loading coordinator.
+
 A restored gate must have correct *collision*, not only its material. A consumed fragment must be hidden and lose interaction collision after stream-in. SaveGame must not silently respawn an item that the player already used.
 
 ## 4. Define and validate a versioned snapshot
