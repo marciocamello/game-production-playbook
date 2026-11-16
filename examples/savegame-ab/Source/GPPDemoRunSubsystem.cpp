@@ -138,6 +138,8 @@ bool UGPPDemoRunSubsystem::TryDonateLight(const FName BeaconId)
     ActiveRun->PoweredBeaconId = BeaconId;
     ActiveRun->LightStage = EGPPDemoLightStage::Donated;
     OnProgressChanged.Broadcast();
+    // A fresh commit may play presentation. Deserialize/load never emits this event.
+    OnBeaconRestored.Broadcast(BeaconId);
     return true;
 }
 
