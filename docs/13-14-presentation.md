@@ -27,6 +27,8 @@ Use Niagara for bounded particles, materials/light parameters for durable visual
 
 **Critical rule:** visual reconstruction may decorate a committed restoration, but **does not grant abilities, change save state or open passage collision**. When presentation is skipped, interrupted or reloaded, the already committed gameplay state must still be correct.
 
+**T15 practical tutorial:** [Niagara, Chaos and deterministic restoration](../tutorials/niagara-chaos-deterministic-restoration.md), plus [original C++ presenter source](../examples/restoration-vfx/README.md), separates a fresh committed donation from restored-state projection after load/streaming. The visual actor animates nonblocking real meshes, triggers an Editor-authored Niagara System, and never controls the durable gate. Optional Chaos decoration has its own separate verification gate.
+
 ## Cinematic handoff
 
 Define explicit states for camera takeover, gameplay input lock, actor movement, animation event, sound/VFX and restoration of control. Avoid long mandatory sequences; test interruption, load-after-event, and disabled presentation. For a finale, verify the player regains the correct camera, HUD and movement in the intended post-finale area.
