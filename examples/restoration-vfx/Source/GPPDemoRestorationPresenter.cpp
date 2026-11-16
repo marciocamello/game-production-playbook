@@ -113,9 +113,9 @@ FVector AGPPDemoRestorationPresenter::StartingOffset(const int32 Index) const
 {
     switch (Index)
     {
-        case 0: return FVector(-170.0, -120.0, -110.0);
-        case 1: return FVector(0.0, 0.0, -190.0);
-        default: return FVector(170.0, 120.0, -110.0);
+        case 0: return FVector(-170.0, -120.0, 110.0);
+        case 1: return FVector(0.0, 0.0, 190.0);
+        default: return FVector(170.0, 120.0, 110.0);
     }
 }
 
