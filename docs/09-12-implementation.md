@@ -48,6 +48,8 @@ Produce only the animations needed by real gameplay: idle, move, interact, respo
 7. Test Blender export/import integrity, Unreal asset validation, Blueprint and material compilation and level placement.
 8. Handoff to a human for actual PIE and the release owner for cooked standalone checks.
 
+**T15 presentation integration:** [Niagara, Chaos and deterministic restoration](../tutorials/niagara-chaos-deterministic-restoration.md) plus [native visual actor example](../examples/restoration-vfx/README.md). Restore final world and collision state from existing progress immediately; one-shot Niagara/Chaos and piece animation consume a fresh-commit event only.
+
 **Asset states:** Concept → Source Created → Export Verified → Imported → Integrated → Editor Checked → Runtime Tested → Human Validated. Report the highest *actually evidenced* stage.
 
 References: [Unreal Engine pipeline](../pipelines/unreal-engine/README.md) · [Blender pipeline](../pipelines/blender/README.md) · [feature execution](06-production-planning/feature-execution.md).
