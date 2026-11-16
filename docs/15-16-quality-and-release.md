@@ -1,5 +1,8 @@
 # Chapters 15–16 — Testing, Optimization, Packaging and Release
 
+**Hands-on verification and delivery:** [T18 — Native Tests, Editor Checks, Human PIE and Profiling](../tutorials/native-tests-editor-pie-profiling.md) includes [eight real native T07 snapshot assertions](../examples/native-validation-tests/README.md) and a distinct manual/packaged performance matrix. [T19 — Windows Packaging, Gameplay Capture and Release](../tutorials/windows-packaging-gameplay-capture-release.md) reuses the existing T02 packaging wrapper and provides [read-only archive/video inspection](../examples/release-evidence/README.md). Source publication is **not** real test execution.
+
+
 ## Separate verification layers
 
 | Layer | What it can establish | What it **cannot** establish |
