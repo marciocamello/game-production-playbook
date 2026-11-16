@@ -49,4 +49,6 @@ Run scoped C++ build, native tests, Editor asset compile/validation, human PIE, 
 
 **T06 practical progression:** [Contextual Interactions, Fragments and Voluntary Sacrifice](../../tutorials/contextual-interactions-pickups-sacrifices.md) extends the real T05 GAS baseline into target selection, LOS checks, stable pickup IDs, hold confirmation and a distinct recovery route. It does **not** claim the code has already been integrated or played.
 
+**T07 persistence implementation:** [SaveGame, Reload and World Partition](../../tutorials/savegame-reload-world-partition.md) adds an [original C++ A/B slot example](../../examples/savegame-ab/README.md), stable identities, logical-world reapplication, streaming checkpoints and fresh-process acceptance. Sample source is not claimed to have been compiled or integrated in a live game.
+
 See [Feature Execution Workflow](../../docs/06-production-planning/feature-execution.md), [Blender pipeline](../blender/README.md), and [The Unmade case study](../../case-studies/the-unmade/README.md).

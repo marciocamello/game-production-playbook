@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-16 — T07: SaveGame, fallback and World Partition state reapplication
+
+- Published [T07 — SaveGame, Reload and World Partition](tutorials/savegame-reload-world-partition.md), covering versioned snapshots, authoritative state, A/B slots, async save/readback verification, checkpoints, world projection, stream-in idempotency and fresh-process Continue.
+- Published [original three-file C++ SaveGame/Run Subsystem](examples/savegame-ab/README.md) with real stage transitions and A/B slot persistence logic, plus a [read-only PowerShell file evidence tool](examples/savegame-ab/scripts/Inspect-SaveSlots.ps1).
+- Added a 30-case test matrix across compile, Editor, manual PIE, corruption fallback in isolated copies, region streaming, checkpoint safety and packaged-game launch.
+- Updated navigation and the T06 follow-up. The example is original but **has not been compiled, integrated or played in an installed UE 5.9 project** by the playbook maintainers; unperformed checks are NOT RUN.
+
 ## 2026-11-16 — T06: contextual interactions and voluntary sacrifice
 
 - Published [T06 — Contextual Interaction, Fragments and Voluntary Sacrifice](tutorials/contextual-interactions-pickups-sacrifices.md), with concrete implementation contracts for actor focus, collision/line-of-sight checks, unique fragment IDs and idempotent collection.

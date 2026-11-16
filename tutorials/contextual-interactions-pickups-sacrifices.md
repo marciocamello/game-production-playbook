@@ -288,6 +288,6 @@ A complete real T06 feature handoff must contain:
 - Real compile and Editor checks, human PIE results and known standalone gaps.
 - No secondary progression authority, no invented success and no unresolved softlock.
 
-Use [the feature execution contract](../docs/06-production-planning/feature-execution.md), [test plan](../templates/test-plan.md) and [agent handoff](../templates/agent-handoff.md). The next tutorial, **T07 — SaveGame, reload and World Partition**, will take the stable fragment IDs, collected-ID ledger, Light stage and powered-beacon identity and **actually serialize/reapply them** instead of treating an in-session demonstration as durable progression.
+Use [the feature execution contract](../docs/06-production-planning/feature-execution.md), [test plan](../templates/test-plan.md) and [agent handoff](../templates/agent-handoff.md). The next tutorial, [**T07 — SaveGame, Reload and World Partition**](savegame-reload-world-partition.md), now supplies original [SaveGame A/B subsystem source](../examples/savegame-ab/README.md) and a complete world-reapplication contract. The source is not automatically integrated with T05/T06; the real project must migrate to a single persistent authority, integrate actors and checkpoints, and pass fresh-process and streaming tests before completion.
 
 **Editorial conclusion:** this document is complete as a reproducible production tutorial. Implementing T06 in any real game remains a separate, observable coding/Editor/testing task.
