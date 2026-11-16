@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-16 — T15: Niagara, Chaos and deterministic restoration
+
+- Published [T15](tutorials/niagara-chaos-deterministic-restoration.md), with real authoritative-vs-presentation separation, an Editor-authored Niagara burst procedure, optional nonblocking Chaos Geometry Collection/Cache workflow, and 29 distinct acceptance scenarios.
+- Extended the **existing T07 Run Subsystem** with `OnBeaconRestored(BeaconId)`, emitted only after a successfully committed donation; load, New Game and ordinary progress events never emit a fresh-restoration signal.
+- Added an [original native three-piece restoration presenter](examples/restoration-vfx/README.md) that animates actual Engine Cube components, activates an assigned Niagara System only on fresh restoration, and snaps to durable state on progress changes/World Partition stream-in. It does not own ability, gate collision or SaveGame state.
+- Updated canonical navigation, T07 documentation, Unreal pipeline and presentation/implementation chapters. No invented Niagara/Chaos binary assets, private game source, GitHub Actions or fabricated acceptance evidence.
+- **Runtime status:** published C++ was not compiled in a UE 5.9 installation; Niagara/Chaos assets have not been authored, recorded, played or packaged, and no PIE/human acceptance was executed. All such checks remain NOT RUN.
+
+
 ## 2026-11-16 — T14: level design, Modeling Mode and Geometry Script
 
 - Published [T14](tutorials/level-design-modeling-mode-geometry-script.md), with a real route dependency contract, Modeling Mode and Geometry Script authoring, World Partition/Actor ownership guidance and 25 distinct gameplay/asset acceptance scenarios.
