@@ -15,4 +15,6 @@ These are **instructional formats**, not partially implemented features. Copy on
 | [Test and Acceptance Plan](test-plan.md) | When separating native, Editor, PIE and packaged checks |
 | [Release Checklist](release-checklist.md) | Before shipping a downloadable game |
 
+**Verification companions:** The [T18 native test example](../examples/native-validation-tests/README.md), [T19 release archive/video inspector](../examples/release-evidence/README.md) and [T20 Glass Box evidence audit](../examples/glass-box-audit/README.md) are working source examples with runtime validation still required; they are not blank feature templates.
+
 Every completed task must have one authoritative artifact path, current owner, known dependencies, objective checks, failures, and an acceptance decision. For a comprehensive task list, see [197-step roadmap](../docs/production-roadmap.md).
