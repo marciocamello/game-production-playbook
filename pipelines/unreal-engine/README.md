@@ -43,4 +43,6 @@ Import tested FBX/GLB assets; verify skeleton rest poses and root units. Retarge
 
 Run scoped C++ build, native tests, Editor asset compile/validation, human PIE, Windows cook/package and **fresh packaged launch** as separate checks. Check test-case results, not only process exit status. Re-run progress/save/streaming tests after changing Actor logic, UI or cinematic returns. Local script automation is permitted; **no GitHub Actions workflows** are created.
 
+**Hands-on tutorial:** [T01 — Unreal Engine 5.9 MCP: Connect, Discover, Author and Verify](../../tutorials/unreal-mcp-5-9.md). It covers the currently documented 5.9 tool discovery tools, project/Editor identity checks, the Unreal Assistant ACP route, terminal setup, a bounded real lighting edit, safe saving and evidence.
+
 See [Feature Execution Workflow](../../docs/06-production-planning/feature-execution.md), [Blender pipeline](../blender/README.md), and [The Unmade case study](../../case-studies/the-unmade/README.md).

@@ -23,7 +23,9 @@ All three use the **same gates**: approved intent → design → executable spec
 5. [Unreal Engine workflow](pipelines/unreal-engine/README.md)
 6. [Blender and 3D asset workflow](pipelines/blender/README.md)
 7. [The Unmade: historical case study](case-studies/the-unmade/README.md)
-8. [Templates and reusable checklists](templates/README.md)
+8. [Practical tutorials: 20 hands-on topics](tutorials/README.md)
+9. [T01 — Unreal Engine 5.9 MCP tutorial](tutorials/unreal-mcp-5-9.md)
+10. [Templates and reusable checklists](templates/README.md)
 
 ## Production chapters
 

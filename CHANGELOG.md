@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-16 — Practical tutorial series started
+
+- Published the [20-topic technical tutorial roadmap](tutorials/README.md), differentiating authored guidance from topics not yet authored.
+- Published [T01: Unreal Engine 5.9 MCP](tutorials/unreal-mcp-5-9.md): safe local setup, client selection, schema discovery, a real bounded lighting exercise, save/reopen checks and troubleshooting.
+- Linked the new tutorial to the main README and Unreal Engine pipeline.
+- All tutorial content is English; the instructions are referenced against Epic's UE 5.9 documentation. No reader's local Editor was operated or tested by this publication.
+
 ## 2026-11-16 — Public playbook foundation
 
 - Initialized independent, public documentation repository with manual, AI-assisted and AI-driven production paths.
