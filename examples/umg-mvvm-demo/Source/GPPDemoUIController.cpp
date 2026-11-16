@@ -312,7 +312,13 @@ bool AGPPDemoUIController::ApplyMasterVolume(float Volume, bool bPersist)
         return false;
     }
     const float Clamped = FMath::Clamp(Volume, 0.0f, 1.0f);
-    UGameplayStatics::PushSoundMixModifier(this, MasterSoundMix);
+    // A slider may call this function repeatedly. Push the mix once per
+    // controller lifetime instead of accumulating repeated modifier pushes.
+    if (!bSoundMixActivated)
+    {
+        UGameplayStatics::PushSoundMixModifier(this, MasterSoundMix);
+        bSoundMixActivated = true;
+    }
     UGameplayStatics::SetSoundMixClassOverride(
         this, MasterSoundMix, MasterSoundClass, Clamped, 1.0f, 0.1f, true);
 

@@ -98,6 +98,7 @@ private:
 
     EGPPDemoScreen Screen = EGPPDemoScreen::None;
     EGPPDemoScreen ReturnScreen = EGPPDemoScreen::Main;
+    bool bSoundMixActivated = false;
 
     UFUNCTION()
     void HandleProgressChanged();

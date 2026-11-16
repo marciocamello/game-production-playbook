@@ -50,7 +50,7 @@ To make volume audible rather than a text-only slider:
 
 1. Author a **real** `SoundClass` for game audio (master class) and route actual music, ambience and SFX under it or to child SoundClasses.
 2. Author a **real** `SoundMix` and assign both sound assets to the controller properties `MasterSoundMix` and `MasterSoundClass`.
-3. The native function calls `PushSoundMixModifier` and `SetSoundMixClassOverride` to adjust the assigned class at runtime. It persists volume in the platform's `GameUserSettings` INI through `GConfig`.
+3. The native function pushes its SoundMix once per controller lifetime and calls `SetSoundMixClassOverride` for subsequent slider changes, avoiding repeated modifier pushes. It persists volume in the platform's `GameUserSettings` INI through `GConfig`.
 4. Confirm sound playing at volume 1.0 is audible and volume 0.0 is effectively silent, without muting unrelated audio routes unintentionally.
 5. Restart the game in a fresh process and verify the saved volume is reapplied. A missing SoundClass/Mix causes the function to return `false`, not fake a success.
 
