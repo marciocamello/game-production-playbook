@@ -31,11 +31,12 @@ All three use the **same gates**: approved intent → design → executable spec
 13. [T05 — Gameplay C++, Gameplay Tags and GAS](tutorials/gameplay-gas-tags-light.md)
 14. [T06 — Contextual interactions, fragments and voluntary sacrifice](tutorials/contextual-interactions-pickups-sacrifices.md)
 15. [T07 — SaveGame, Reload and World Partition](tutorials/savegame-reload-world-partition.md)
-16. [Original versioned SaveGame A/B C++ and inspection tool](examples/savegame-ab/README.md)
-17. [Light ability: original C++ GAS implementation example](examples/gas-light-demo/README.md)
-18. [Real local build/packaging PowerShell examples](examples/unreal-local-build/README.md)
-19. [Read-only Git preflight and multi-agent example](examples/multi-agent-handoff/README.md)
-20. [Templates and reusable checklists](templates/README.md)
+16. [T08 — Camera rigs, occlusion and Enhanced Input](tutorials/camera-rigs-occlusion-enhanced-input.md)
+17. [Original versioned SaveGame A/B C++ and inspection tool](examples/savegame-ab/README.md)
+18. [Light ability and T08 camera/sprint C++ example](examples/gas-light-demo/README.md)
+19. [Real local build/packaging PowerShell examples](examples/unreal-local-build/README.md)
+20. [Read-only Git preflight and multi-agent example](examples/multi-agent-handoff/README.md)
+21. [Templates and reusable checklists](templates/README.md)
 
 ## Production chapters
 

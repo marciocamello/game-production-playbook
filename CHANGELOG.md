@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-16 — T08: elevated camera, real zoom/sprint and collision diagnosis
+
+- Published [T08 — Camera Rigs, Occlusion and Enhanced Input](tutorials/camera-rigs-occlusion-enhanced-input.md) with practical Spring Arm and Gameplay Cameras approaches, explicit Camera Asset authoring, collision debugging and 25 separate acceptance scenarios.
+- Extended the **existing** [T05 GAS Character source](examples/gas-light-demo/README.md) rather than creating a second Character or camera manager: smooth bounded wheel zoom, Sprint/ResetSprint, explicit camera probe settings and actual Spring Arm collision-displacement reporting.
+- Retained T05 backward compatibility by making both additional Input Actions optional for the original four-action lesson; completing T08 requires authoring and binding them in the real Editor.
+- Reconciled the tutorial roadmap, main navigation and Unreal pipeline. No private source/paths, placeholder assets or GitHub Actions were added.
+- **Evidence boundary:** C++ changes were published but not compiled in a local Unreal 5.9 Editor, bound to new native Input Actions, manually played, cooked or packaged during publication; all such checks remain NOT RUN.
+
 ## 2026-11-16 — T07: SaveGame, fallback and World Partition state reapplication
 
 - Published [T07 — SaveGame, Reload and World Partition](tutorials/savegame-reload-world-partition.md), covering versioned snapshots, authoritative state, A/B slots, async save/readback verification, checkpoints, world projection, stream-in idempotency and fresh-process Continue.
