@@ -17,6 +17,8 @@ The case was grounded in the original game's:
 
 This index names **source categories**, not downloadable public mirrors. Their presence in a private history is not permission to publish source bytes or copyrighted assets.
 
+**Publication method:** [T20 — Glass Box, Provenance and Evidence-Based Postmortem](../../tutorials/glass-box-provenance-postmortem.md) explains how this evidence-grade inventory supports honest public reporting and how private records must remain private. Its read-only auditor verifies supplied real files/hashes, not historical claims or missing runtime tests.
+
 ## Evidence grades
 
 | Grade | Evidence type | Appropriate claim |
