@@ -1,5 +1,38 @@
 # Changelog
 
+## 2026-11-16 — T20: Glass Box, source provenance and evidence-based postmortem
+
+- Published [T20](tutorials/glass-box-provenance-postmortem.md), covering decisions, AI participation, artifact rights, exact execution states, private/public boundaries, failures, scope cuts, factual postmortem and 27 acceptance checks.
+- Added an original [read-only Python evidence manifest auditor](examples/glass-box-audit/README.md) for existing real files: unique IDs, safe relative paths, SHA-256 verification, named test outcomes, and separate integrity/error/open-gate exit statuses.
+- Reused the case-study evidence inventory, canonical templates and T18/T19 evidence; no fabricated logs, licensed assets or private project source were uploaded.
+- **Runtime status:** the auditor has not been executed against a real game evidence manifest here; public release/human acceptance are NOT RUN.
+
+## 2026-11-16 — T19: packaged Windows game, authentic gameplay video and release
+
+- Published [T19](tutorials/windows-packaging-gameplay-capture-release.md), reusing the existing [T02 BuildCookRun PowerShell wrappers](examples/unreal-local-build/README.md).
+- Added a real [read-only release inspector](examples/release-evidence/README.md) for the existing Win64 archive/target executable, cooked content, SHA-256 and optional ffprobe video resolution/duration/sha verification.
+- Separated archive presence from independent executable launch, critical-route gameplay, fresh-process Save/Load, video authenticity, submission and downloaded-artifact verification; 28 explicit release gates.
+- **Runtime status:** UBT/UAT, standalone launch, OBS capture, video probe and upload have NOT RUN in this publication.
+
+## 2026-11-16 — T18: native assertions, Editor/PIE QA and profiling
+
+- Published [T18](tutorials/native-tests-editor-pie-profiling.md), with a strict distinction between compilation, native Automation, Editor asset checks, manual PIE, fresh-process SaveGame, standalone launch, profiling and human acceptance.
+- Added an [original C++ test](examples/native-validation-tests/README.md) with eight real assertions against the already implemented T07 UGPPDemoRunSubsystem::ValidateSnapshot, no stubbed validator or cloned business rules.
+- Recorded 27 evidence gates and regression/error-handling guidance. **Runtime status:** source authored but not compiled, run in UE 5.9, profiled or playtested; all engine checks remain NOT RUN.
+
+## 2026-11-16 — T17: actual reactive sound design and legal source inventory
+
+- Published [T17](tutorials/reactive-music-spatial-audio-rights.md) with a real MetaSound/Audio Component Editor exercise, fresh-commit spatial cue, state-projected ambiance, optional Quartz, applied T09 volume settings, correct SaveGame playback and 28 listening/legal tests.
+- Reused T07/T15 gameplay events and existing provenance templates, without duplicating state, shipping unlicensed recordings or declaring nonexistent audio packages integrated.
+- **Runtime status:** source audio, Editor MetaSound/attenuation assets, listening tests and packaged audio validation have NOT RUN here.
+
+## 2026-11-16 — T16: interruption-safe Sequencer and gameplay return
+
+- Published [T16](tutorials/sequencer-gameplay-cinematic-return.md), with an explicit 3–5-second Level Sequence authoring exercise, fresh T15 event trigger, one input-lock owner, idempotent finish/skip/unload cleanup and camera/HUD restoration.
+- Added 26 distinct acceptance cases and separate source-vs-Editor/package execution boundaries.
+- **Runtime status:** no real Level Sequence asset, runtime playback, human PIE or packaged skip test was performed by this documentation publication.
+
+
 ## 2026-11-16 — T15: Niagara, Chaos and deterministic restoration
 
 - Published [T15](tutorials/niagara-chaos-deterministic-restoration.md), with real authoritative-vs-presentation separation, an Editor-authored Niagara burst procedure, optional nonblocking Chaos Geometry Collection/Cache workflow, and 29 distinct acceptance scenarios.
