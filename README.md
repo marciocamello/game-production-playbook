@@ -2,6 +2,8 @@
 
 **A practical, evidence-driven guide to making games from idea to release — manually, with AI assistance, or through AI-driven production.**
 
+**Series publication: 20 of 20 practical technical tutorials published.** Published means written guidance/source is available, not that Unreal/Blender examples have been run or game acceptance achieved.
+
 This repository teaches an end-to-end production system rather than a collection of prompts. It grew out of the planning, execution, mistakes, corrections, and scope decisions of *The Unmade*, a project developed for Epic AI MegaJam 2026 using Unreal Engine 5.9, C++, Blueprints, Blender, and multiple AI-assisted workflows.
 
 ## Choose your production model
@@ -41,16 +43,24 @@ All three use the **same gates**: approved intent → design → executable spec
 23. [T14 — Level design, Modeling Mode and Geometry Script](tutorials/level-design-modeling-mode-geometry-script.md)
 24. [T15 — Niagara, Chaos and deterministic restoration](tutorials/niagara-chaos-deterministic-restoration.md)
 25. [Original state-driven restoration VFX C++ source](examples/restoration-vfx/README.md)
-26. [Guarded Unreal Editor blockout authoring script](examples/level-blockout/README.md)
-27. [Guarded Unreal Editor Python FBX importer](examples/unreal-import-static-mesh/README.md)
-28. [Blender existing-rig rest pose and animation audit](examples/blender-rig-audit/README.md)
-29. [Original UMG/MVVM native HUD and menu example](examples/umg-mvvm-demo/README.md)
-30. [Original versioned SaveGame A/B C++ and inspection tool](examples/savegame-ab/README.md)
-31. [Light ability and T08 camera/sprint C++ example](examples/gas-light-demo/README.md)
-32. [Original worked art-production brief](examples/visual-art-brief/README.md)
-33. [Real local build/packaging PowerShell examples](examples/unreal-local-build/README.md)
-34. [Read-only Git preflight and multi-agent example](examples/multi-agent-handoff/README.md)
-35. [Templates and reusable checklists](templates/README.md)
+26. [T16 — Sequencer, gameplay transitions and cinematic return](tutorials/sequencer-gameplay-cinematic-return.md)
+27. [T17 — Reactive music, spatial sound and audio rights](tutorials/reactive-music-spatial-audio-rights.md)
+28. [T18 — Native tests, Editor checks, human PIE and profiling](tutorials/native-tests-editor-pie-profiling.md)
+29. [T19 — Windows packaging, real gameplay capture and release](tutorials/windows-packaging-gameplay-capture-release.md)
+30. [T20 — Glass Box, provenance and evidence-based postmortem](tutorials/glass-box-provenance-postmortem.md)
+31. [Original native T07 validation tests](examples/native-validation-tests/README.md)
+32. [Read-only Windows package and real video inspector](examples/release-evidence/README.md)
+33. [Read-only evidence hash/status audit](examples/glass-box-audit/README.md)
+34. [Guarded Unreal Editor blockout authoring script](examples/level-blockout/README.md)
+35. [Guarded Unreal Editor Python FBX importer](examples/unreal-import-static-mesh/README.md)
+36. [Blender existing-rig rest pose and animation audit](examples/blender-rig-audit/README.md)
+37. [Original UMG/MVVM native HUD and menu example](examples/umg-mvvm-demo/README.md)
+38. [Original versioned SaveGame A/B C++ and inspection tool](examples/savegame-ab/README.md)
+39. [Light ability and T08 camera/sprint C++ example](examples/gas-light-demo/README.md)
+40. [Original worked art-production brief](examples/visual-art-brief/README.md)
+41. [Real local build/packaging PowerShell examples](examples/unreal-local-build/README.md)
+42. [Read-only Git preflight and multi-agent example](examples/multi-agent-handoff/README.md)
+43. [Templates and reusable checklists](templates/README.md)
 
 ## Production chapters
 
