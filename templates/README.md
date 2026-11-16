@@ -4,6 +4,10 @@ These are **instructional formats**, not partially implemented features. Copy on
 
 | Template | When to use |
 | --- | --- |
+| [Project Charter](project-charter.md) | Select a feasible game concept and approve platform, team, deadline and constraints |
+| [Game Design Document](game-design-document.md) | Define approved player experience, full critical route, mechanics and intentional cuts |
+| [Technical Design Document](technical-design.md) | Define verified existing systems, authority, data lifecycle and actual Engine integration |
+| [Architecture Decision Record](architecture-decision-record.md) | Record the rationale, alternatives and consequences of a meaningful technical choice |
 | [Executable Feature Spec](feature-specification.md) | Before assigning a real end-to-end gameplay or content feature |
 | [Agent / contributor handoff](agent-handoff.md) | When transferring files, Blender output or sole Editor ownership |
 | [3D Asset Brief and Provenance](asset-brief.md) | Before spending generation credits, modeling or importing assets |

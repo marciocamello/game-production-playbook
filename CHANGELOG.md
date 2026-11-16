@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-16 — T03: concept, design authority and executable SDD
+
+- Published [T03 — From Concept to GDD, TDD and Executable SDD](tutorials/concept-to-gdd-tdd-executable-sdd.md), teaching documented human approvals, durable gameplay-state ownership, contract traceability and end-to-end verification.
+- Added four source-neutral authoring templates: [Project Charter](templates/project-charter.md), [GDD](templates/game-design-document.md), [TDD](templates/technical-design.md) and [ADR](templates/architecture-decision-record.md).
+- Reused the existing canonical Feature Spec template; no duplicate feature contract or fabricated implementation was created.
+- Reconciled tutorial roadmap, main navigation, design chapter and template index. All repository artifacts remain English and free of personal absolute paths.
+
 ## 2026-11-16 — T02: real local Unreal builds and packages
 
 - Published [T02 — Unreal Engine 5.9 project bootstrap and local build pipeline](tutorials/unreal-project-bootstrap-local-build.md).

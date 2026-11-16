@@ -2,6 +2,8 @@
 
 ## 04. Game Design Document
 
+**Hands-on learning path:** [T03 — From Concept to GDD, TDD and Executable SDD](../tutorials/concept-to-gdd-tdd-executable-sdd.md). Reuse the existing [Project Charter](../templates/project-charter.md), [GDD](../templates/game-design-document.md), [TDD](../templates/technical-design.md), [Architecture Decision Record](../templates/architecture-decision-record.md), and [Feature Spec](../templates/feature-specification.md) rather than inventing competing canonical files.
+
 A useful GDD describes **what the player experiences** and what is intentionally out of scope. Keep story and implementation rules separate until the game director approves them.
 
 Minimum sections:
