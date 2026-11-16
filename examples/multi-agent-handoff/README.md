@@ -16,7 +16,7 @@ pwsh -File ./examples/multi-agent-handoff/scripts/Inspect-GitPreflight.ps1 -Repo
 
 If your game is in another repository, set `-Repository` to that checkout's path **only when you have read access to it**. No location is hardcoded in this example.
 
-The script shows the current checkout's Git HEAD, branch, porcelain status, staged/unstaged changes and ordinary untracked files. It **does not inspect ignored files, unsaved Unreal packages, non-Git source assets, Editor identity or MCP tool capabilities**. The sole Editor operator must inspect those separately.
+The script uses Git's documented `--no-optional-locks` mode to avoid incidental index-refresh locking and shows the current checkout's HEAD, branch, porcelain status, staged/unstaged changes and ordinary untracked files. It **does not inspect ignored files, unsaved Unreal packages, non-Git source assets, Editor identity or MCP tool capabilities**. The sole Editor operator must inspect those separately.
 
 ## 2. Assign a real, bounded feature
 
@@ -55,6 +55,7 @@ Use [Artifact Ownership Matrix](../../templates/artifact-ownership-matrix.md), [
 
 - [Official Unreal MCP 5.9 documentation](https://dev.epicgames.com/documentation/unreal-engine/unreal-mcp-in-unreal-editor?application_version=5.9)
 - [Git status documentation](https://git-scm.com/docs/git-status)
+- [Git global options and `--no-optional-locks`](https://git-scm.com/docs/git)
 - [The Unmade observed engineering failure patterns](../../case-studies/the-unmade/failures-and-fixes.md)
 
 No third-party code or Unreal assets are redistributed by this example. The read-only script is original educational material under [MIT](../../LICENSE-CODE.md).

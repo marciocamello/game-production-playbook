@@ -10,6 +10,7 @@ These are **instructional formats**, not partially implemented features. Copy on
 | [Architecture Decision Record](architecture-decision-record.md) | Record the rationale, alternatives and consequences of a meaningful technical choice |
 | [Executable Feature Spec](feature-specification.md) | Before assigning a real end-to-end gameplay or content feature |
 | [Agent / contributor handoff](agent-handoff.md) | When transferring files, Blender output or sole Editor ownership |
+| [Artifact Ownership Matrix](artifact-ownership-matrix.md) | Assign one writer per file/asset, track the exclusive Editor session and prevent destructive conflicts |
 | [3D Asset Brief and Provenance](asset-brief.md) | Before spending generation credits, modeling or importing assets |
 | [Test and Acceptance Plan](test-plan.md) | When separating native, Editor, PIE and packaged checks |
 | [Release Checklist](release-checklist.md) | Before shipping a downloadable game |

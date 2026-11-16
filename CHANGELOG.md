@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-16 — T04: multi-agent ownership, bounded parallelism and Editor handoffs
+
+- Published [T04 — Multi-Agent Game Production](tutorials/multi-agent-production-handoffs.md) with explicit dependencies, one-writer-per-asset rules, exclusive Unreal Editor/MCP ownership, safe dirty-package transfer, handoff evidence and human acceptance.
+- Added the [Artifact Ownership Matrix](templates/artifact-ownership-matrix.md), a practical [handoff example](examples/multi-agent-handoff/README.md) and a real read-only [Git preflight script](examples/multi-agent-handoff/scripts/Inspect-GitPreflight.ps1).
+- Used current official Unreal MCP and Git documentation; the preflight uses Git's `--no-optional-locks` to avoid incidental index refresh locking.
+- Updated canonical README, pipeline, templates and tutorial index. No private paths, game source mirroring, GitHub Actions or invented test successes.
+- **Runtime limitation:** PowerShell preflight has not been executed on the reader's machine; Editor dirty packages and ignored files remain outside Git's status view.
+
 ## 2026-11-16 — T03: concept, design authority and executable SDD
 
 - Published [T03 — From Concept to GDD, TDD and Executable SDD](tutorials/concept-to-gdd-tdd-executable-sdd.md), teaching documented human approvals, durable gameplay-state ownership, contract traceability and end-to-end verification.

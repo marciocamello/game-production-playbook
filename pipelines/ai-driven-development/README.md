@@ -16,6 +16,8 @@ AI-driven means **tools and agents do actual production work**, not that AI sugg
 
 Provider choice depends on capability, cost and available connector tools. Do not add a provider to the workflow simply because it exists.
 
+**Hands-on guide:** [T04 — Multi-Agent Game Production & Handoffs](../../tutorials/multi-agent-production-handoffs.md) shows real dependency planning, one Editor operator, artifact ownership and non-destructive conflict handling. Use its [ownership template](../../templates/artifact-ownership-matrix.md) and [read-only preflight example](../../examples/multi-agent-handoff/README.md) with an approved feature.
+
 ## Essential controls
 
 ### One writer, one Editor owner
