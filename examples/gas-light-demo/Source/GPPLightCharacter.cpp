@@ -25,7 +25,7 @@ DEFINE_LOG_CATEGORY_STATIC(LogGPPLightExample, Log, All);
 
 AGPPLightCharacter::AGPPLightCharacter()
 {
-    PrimaryActorTick.bCanEverTick = false;
+    PrimaryActorTick.bCanEverTick = true;
 
     AbilitySystem = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystem"));
     AbilitySystem->SetIsReplicated(false); // This tutorial deliberately targets standalone single-player.
@@ -56,15 +56,22 @@ AGPPLightCharacter::AGPPLightCharacter()
     CameraArm->SetRelativeRotation(FRotator(-55.0f, 45.0f, 0.0f));
     CameraArm->SetUsingAbsoluteRotation(true);
     CameraArm->bDoCollisionTest = true;
+    CameraArm->ProbeChannel = ECC_Camera;
+    CameraArm->ProbeSize = 12.0f;
+    // Keep lag off initially to isolate true collision correction from smoothing.
+    CameraArm->bEnableCameraLag = false;
 
     FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
     FollowCamera->SetupAttachment(CameraArm, USpringArmComponent::SocketName);
     FollowCamera->bUsePawnControlRotation = false;
+    FollowCamera->SetRelativeLocation(FVector::ZeroVector);
+    // Requested zoom is separate from the camera's actual collision-retracted position.
+    DesiredCameraArmLength = CameraArm->TargetArmLength;
 
     bUseControllerRotationYaw = false;
     GetCharacterMovement()->bOrientRotationToMovement = true;
     GetCharacterMovement()->RotationRate = FRotator(0.0f, 360.0f, 0.0f);
-    GetCharacterMovement()->MaxWalkSpeed = 380.0f;
+    GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
 }
 
 UAbilitySystemComponent* AGPPLightCharacter::GetAbilitySystemComponent() const
@@ -90,12 +97,66 @@ void AGPPLightCharacter::BeginPlay()
         AbilitySystem->GiveAbility(FGameplayAbilitySpec(UGPPLightAbility::StaticClass(), 1));
     }
 
+    GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
     ApplyLightStage(EGPPLightStage::Owned);
+}
+
+void AGPPLightCharacter::Tick(const float DeltaSeconds)
+{
+    Super::Tick(DeltaSeconds);
+
+    const float MinimumLength = FMath::Max(100.0f, CameraMinimumArmLength);
+    const float MaximumLength = FMath::Max(MinimumLength, CameraMaximumArmLength);
+    DesiredCameraArmLength = FMath::Clamp(DesiredCameraArmLength, MinimumLength, MaximumLength);
+
+    const float UpdatedLength = FMath::FInterpTo(
+        CameraArm->TargetArmLength, DesiredCameraArmLength, DeltaSeconds,
+        FMath::Max(0.1f, CameraZoomInterpolation));
+
+    CameraArm->TargetArmLength = UpdatedLength;
+
+    const bool bRetracted = CameraArm->IsCollisionFixApplied();
+    if (bRetracted != bWasCameraRetracted)
+    {
+        UE_LOG(LogGPPLightExample, Display,
+            TEXT("Camera boom collision: %s, retraction %.1f cm; requested length %.1f cm"),
+            bRetracted ? TEXT("applied") : TEXT("cleared"),
+            GetCameraRetractionCm(), CameraArm->TargetArmLength);
+        bWasCameraRetracted = bRetracted;
+    }
+}
+
+bool AGPPLightCharacter::IsCameraRetracted() const
+{
+    return CameraArm && CameraArm->IsCollisionFixApplied();
+}
+
+float AGPPLightCharacter::GetCameraRetractionCm() const
+{
+    if (!CameraArm || !FollowCamera || !CameraArm->IsCollisionFixApplied())
+    {
+        return 0.0f;
+    }
+
+    return FVector::Dist(
+        CameraArm->GetUnfixedCameraPosition(), FollowCamera->GetComponentLocation());
+}
+
+void AGPPLightCharacter::ResetSprint()
+{
+    EndSprint();
+}
+
+void AGPPLightCharacter::UnPossessed()
+{
+    EndSprint();
+    Super::UnPossessed();
 }
 
 void AGPPLightCharacter::PawnClientRestart()
 {
     Super::PawnClientRestart();
+    ResetSprint();
 
     APlayerController* PC = Cast<APlayerController>(GetController());
     if (!PC || !PC->GetLocalPlayer())
@@ -134,6 +195,47 @@ void AGPPLightCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
     Input->BindAction(ToggleAction, ETriggerEvent::Started, this, &AGPPLightCharacter::ActivateLight);
     Input->BindAction(DonateAction, ETriggerEvent::Started, this, &AGPPLightCharacter::DonateLight);
     Input->BindAction(RecoverAction, ETriggerEvent::Started, this, &AGPPLightCharacter::RecoverLight);
+
+    // These actions are optional for the legacy T05 four-action configuration.
+    if (ZoomAction)
+    {
+        Input->BindAction(ZoomAction, ETriggerEvent::Triggered, this, &AGPPLightCharacter::Zoom);
+    }
+
+    if (SprintAction)
+    {
+        Input->BindAction(SprintAction, ETriggerEvent::Started, this, &AGPPLightCharacter::BeginSprint);
+        Input->BindAction(SprintAction, ETriggerEvent::Completed, this, &AGPPLightCharacter::EndSprint);
+        Input->BindAction(SprintAction, ETriggerEvent::Canceled, this, &AGPPLightCharacter::EndSprint);
+    }
+}
+
+void AGPPLightCharacter::Zoom(const FInputActionValue& Value)
+{
+    const float Axis = Value.Get<float>();
+    if (!FMath::IsNearlyZero(Axis))
+    {
+        const float MinimumLength = FMath::Max(100.0f, CameraMinimumArmLength);
+        const float MaximumLength = FMath::Max(MinimumLength, CameraMaximumArmLength);
+        DesiredCameraArmLength = FMath::Clamp(
+            DesiredCameraArmLength - Axis * CameraZoomStep, MinimumLength, MaximumLength);
+    }
+}
+
+void AGPPLightCharacter::BeginSprint()
+{
+    if (GetCharacterMovement())
+    {
+        GetCharacterMovement()->MaxWalkSpeed = FMath::Max(WalkSpeed, SprintSpeed);
+    }
+}
+
+void AGPPLightCharacter::EndSprint()
+{
+    if (GetCharacterMovement())
+    {
+        GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
+    }
 }
 
 void AGPPLightCharacter::Move(const FInputActionValue& Value)

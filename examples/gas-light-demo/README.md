@@ -27,6 +27,18 @@ The class names start with `GPP` to avoid colliding with common project classes.
 - Editor-authored Input Actions / Mapping Context, a saved playable map with walkable collision, a game mode selecting the character, and one actual beacon Actor.
 - A sole authorized Editor/MCP operator and a source owner assigned in the game's executable Feature Spec.
 
+### Optional T08 camera and sprint extension
+
+The **same** `AGPPLightCharacter` now exposes two optional Enhanced Input actions and adds real smooth zoom, sprint and camera-collision telemetry without replacing T05's GAS/Light implementation. No new Character or competing camera controller was created.
+
+- Create `IA_GPP_Zoom` (Axis1D), map mouse wheel up/down to positive/negative values; set the Character Blueprint's `ZoomAction` to it. Actual zoom direction depends on the authored input modifiers.
+- Create `IA_GPP_Sprint` (Boolean), map Left Shift; set `SprintAction` in the same Character Blueprint.
+- The existing Spring Arm uses `ECC_Camera` collision probes and smooth interpolation of requested zoom distance. `IsCameraRetracted()` and `GetCameraRetractionCm()` report actual collision correction separately from the desired boom length.
+- Sprint modifies `CharacterMovement.MaxWalkSpeed` only during the active input and resets on release/cancel, possession loss and PawnClientRestart. When menus or cinematics steal input focus, call the existing `ResetSprint()` through a real UI/Controller handoff.
+- The original four T05 input assets remain sufficient for T05 alone. T08 behavior is only exercised after its real two additional assets are authored, assigned and tested.
+
+**T08 tutorial:** [Camera rigs, occlusion and Enhanced Input](../../tutorials/camera-rigs-occlusion-enhanced-input.md).
+
 ## Integration sequence
 
 1. Inspect the target project. Do not copy these files if it already implements the same ability/state authority.
