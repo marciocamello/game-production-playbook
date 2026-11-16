@@ -197,6 +197,7 @@ An implementation **is not Human Validated** until a named reviewer plays the ac
 ## 9. Next
 
 - [T06 — Contextual interaction, pickup identity and irreversible choices](README.md) will replace immediate station inputs with proper target selection, cancellation, once-only collectibles and physical world consequences.
+- [T06 — Contextual Interaction, Fragments and Voluntary Sacrifice](contextual-interactions-pickups-sacrifices.md) documents how to replace the baseline's direct E/R proximity handlers with real unique-ID pickups, LOS, interaction focus and a cancelable hold-to-donate.
 - [T07 — SaveGame and World Partition](README.md) will introduce durable logical authority, unique IDs, actor registration and fresh-process replay checks.
 - [T02 — Local Build and Packaging](unreal-project-bootstrap-local-build.md) supplies real local UBT/UAT invocation.
 - [The Unmade design and GAS decisions](../case-studies/the-unmade/decisions.md) show how these concepts informed an approved narrative system, with evidence boundaries.

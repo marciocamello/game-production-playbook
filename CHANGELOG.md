@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-16 — T06: contextual interactions and voluntary sacrifice
+
+- Published [T06 — Contextual Interaction, Fragments and Voluntary Sacrifice](tutorials/contextual-interactions-pickups-sacrifices.md), with concrete implementation contracts for actor focus, collision/line-of-sight checks, unique fragment IDs and idempotent collection.
+- Specified replacement of the T05 direct-input donation/recovery paths with one context action, cancelable hold-to-confirm and a separate Recovery fragment.
+- Added 24 independent human PIE acceptance scenarios, including wall obstruction, target change, duplicate IDs, canceled holds and anti-softlock traversal.
+- Linked the guide from the tutorial index, project README, Unreal pipeline and T05 follow-up. This is a documentation update; it does not claim the reader's project was implemented, compiled or run.
+
 ## 2026-11-16 — T05: real GAS gameplay source and manual integration checks
 
 - Published [T05 — Gameplay C++, Gameplay Tags and GAS](tutorials/gameplay-gas-tags-light.md), with a precise native ability lifecycle, derived Gameplay Tag blocking, in-session donation/recovery and human PIE acceptance cases.

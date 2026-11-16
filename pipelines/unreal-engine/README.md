@@ -47,4 +47,6 @@ Run scoped C++ build, native tests, Editor asset compile/validation, human PIE, 
 
 **Hands-on tutorials:** [T01 — Unreal Engine 5.9 MCP](../../tutorials/unreal-mcp-5-9.md) covers tool discovery, Editor identity, client integration and a verified lighting edit. [T02 — Project Bootstrap & Local Build](../../tutorials/unreal-project-bootstrap-local-build.md) covers project targets, module dependencies, Game Default Map, actual [PowerShell UBT/UAT wrappers](../../examples/unreal-local-build/README.md), Windows packaging and human standalone verification.
 
+**T06 practical progression:** [Contextual Interactions, Fragments and Voluntary Sacrifice](../../tutorials/contextual-interactions-pickups-sacrifices.md) extends the real T05 GAS baseline into target selection, LOS checks, stable pickup IDs, hold confirmation and a distinct recovery route. It does **not** claim the code has already been integrated or played.
+
 See [Feature Execution Workflow](../../docs/06-production-planning/feature-execution.md), [Blender pipeline](../blender/README.md), and [The Unmade case study](../../case-studies/the-unmade/README.md).
