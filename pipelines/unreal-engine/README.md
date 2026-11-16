@@ -27,6 +27,8 @@ For streaming worlds, give progression-critical Actors stable IDs, commit state 
 
 **Hands-on GAS example:** [T05 — Gameplay C++, Gameplay Tags and GAS](../../tutorials/gameplay-gas-tags-light.md) includes original [C++ source for a Light ability, native Gameplay Tag, Character and powered beacon](../../examples/gas-light-demo/README.md), with an in-Editor integration guide and an explicit untested-runtime boundary. Reuse existing ASC/progression authority rather than duplicating it.
 
+**T13 verified import and gameplay-aware Actor integration:** [Unreal Static Mesh Import, Materials, Collision and Actors](../../tutorials/unreal-static-mesh-import-integration.md) includes a [guarded one-FBX Editor Python import](../../examples/unreal-import-static-mesh/README.md). Imported `.uasset` existence never substitutes for verified material, collision, Actor wiring or PIE.
+
 ## 04. Spatial and art integration
 
 Approve visual concepts and spatial blockout reference before large-scale scene authoring when the style/route matters. Build actual paths with Modeling Mode, static meshes, collisions and checkpoints. Preserve gameplay Actors while refining scenery. Use Geometry Script and reusable materials for controlled geometric detail; PCG, Water, Nanite and Mesh Terrain are optional engineering choices subject to benefit, compatibility and release safety.

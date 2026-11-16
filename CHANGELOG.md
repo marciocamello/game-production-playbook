@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-16 — T13: Unreal FBX import and real actor/material/collision integration
+
+- Published [T13](tutorials/unreal-static-mesh-import-integration.md), covering Unreal 5.9 Content Browser/FBX import, dimensions, UVs, Material Instances, simple/UCX collision and stable Actor ownership.
+- Added an [original guarded Editor Python importer](examples/unreal-import-static-mesh/README.md) for one existing FBX and one new Static Mesh package. It checks actual inputs, refuses overwrites and saves only the new target asset.
+- Updated main navigation, the Unreal pipeline and implementation chapter. No binary Unreal assets, fictitious materials or unauthorized map changes were added.
+- **Not executed:** installed Editor import, actual bounds/materials/collision, human PIE, cook/package and packaged gameplay remain NOT RUN.
+
+
 ## 2026-11-16 — T12: source rig audit and Unreal animation retargeting
 
 - Published [T12](tutorials/character-rigging-animation-retarget.md), covering rest pose and hierarchy compatibility, separate skeletal-mesh/animation-only FBX import, IK Rig/Retargeter and real AnimBP/PIE gates.

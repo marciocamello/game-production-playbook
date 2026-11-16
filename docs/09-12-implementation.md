@@ -35,6 +35,8 @@ Start from a consistent multiview character reference and a neutral riggable pos
 
 Produce only the animations needed by real gameplay: idle, move, interact, response, recovery and finale as required. Verify animation-only FBX scale separately from mesh scale, test retarget at several sampled frames, check foot contact and loop seams, and confirm a valid blending/animation graph. If an MCP integration cannot author AnimGraph nodes, document the limitation and use an actually supported authoring route; do not pretend the graph exists.
 
+**T13 asset-to-engine tutorial:** [Unreal Static Mesh Import, Actor/Material Integration and Collision](../tutorials/unreal-static-mesh-import-integration.md) plus a [guarded Editor Python import example](../examples/unreal-import-static-mesh/README.md). Preserve stable gameplay Actor identity while replacing visuals.
+
 ## 12. Integrate in the Engine
 
 1. Assign one active Unreal Editor/MCP owner; inspect loaded map, dirty assets, file ownership and existing Blueprints before edits.
