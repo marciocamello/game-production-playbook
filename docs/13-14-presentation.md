@@ -33,6 +33,10 @@ Use Niagara for bounded particles, materials/light parameters for durable visual
 
 ## Cinematic handoff
 
+**T16 practical cinematic:** [Sequencer, Gameplay Transitions and Cinematic Return](../tutorials/sequencer-gameplay-cinematic-return.md) uses the existing T15 fresh-commit event and project input/camera authority for actual authored Level Sequences, normal/skip/interrupted return, and 26 explicitly separate QA gates. No real sequence is created just by publishing the tutorial.
+
+
+
 Define explicit states for camera takeover, gameplay input lock, actor movement, animation event, sound/VFX and restoration of control. Avoid long mandatory sequences; test interruption, load-after-event, and disabled presentation. For a finale, verify the player regains the correct camera, HUD and movement in the intended post-finale area.
 
 **Exit evidence:** complete player-facing interface, audible/reactive sound, reliable FX and cinematics, accessibility checks, and packaged-game verification.
