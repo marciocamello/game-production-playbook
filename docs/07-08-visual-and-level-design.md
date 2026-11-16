@@ -2,6 +2,8 @@
 
 **Core principle:** a concept, a level diagram, an Unreal blockout, and an imported game-ready asset are different deliverables.
 
+**Practical reference and asset-brief tutorial:** [T10 — Visual References, Style Bibles and Generation-Ready Art Briefs](../tutorials/visual-references-generation-ready-briefs.md) provides one coherent art grammar, a rights-cleared multi-view reference package and [worked two-state landmark brief](../examples/visual-art-brief/README.md).
+
 ## 07. Visual-first development
 
 1. Approve character silhouette and its behavior at **actual gameplay camera size**, not just in a portrait concept.

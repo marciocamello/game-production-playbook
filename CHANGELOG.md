@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-16 — T10: art-direction contracts and generation-ready briefs
+
+- Published [T10](tutorials/visual-references-generation-ready-briefs.md), with human-selected style bibles, rights-cleared multi-view references, technical Blender/Unreal briefs, a 12-case acceptance matrix and failure recovery.
+- Added an [original worked two-state modular landmark brief](examples/visual-art-brief/README.md). It is intentionally a documented design example, not a fake model, reference render or Unreal asset.
+- Reused the [existing canonical asset-brief template](templates/asset-brief.md); no duplicate authority or unlicensed third-party imagery was added.
+- Updated main navigation, tutorial roadmap and visual-design chapter. Production art and in-engine checks remain NOT CREATED/NOT RUN.
+
+
 ## 2026-11-16 — T09: UMG/MVVM HUD, functional menus and persisted settings
 
 - Published [T09 — UMG/MVVM HUD, Menus, Settings and Loading Boundaries](tutorials/umg-mvvm-hud-menus-settings-loading.md) with an explicit six-WBP Editor wiring plan, 27 real acceptance cases and detailed false-success prevention for Save/Continue.
