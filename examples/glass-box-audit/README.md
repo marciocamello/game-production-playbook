@@ -4,6 +4,16 @@
 
 **Publication status:** The source has been published but **has NOT RUN against a real game manifest** in this repository session. The playbook does not include fabricated game evidence, generated fake PASS results or redistributed private files.
 
+## Reproducible CLI regression tests
+
+[Run the actual 14-case regression harness](tests/test_evidence_auditor.py) with Python 3.11+:
+
+    python ./examples/glass-box-audit/tests/test_evidence_auditor.py
+
+The tests spawn the real auditor against temporary **real files** and real SHA-256 values. They assert the three exit-code classes (0, 1, 2), valid/invalid manifests, incorrect hashes, traversal/symlinks, duplicate IDs, invalid statuses and missing evidence. The symlink case reports **BLOCKED** if the OS does not allow its creation; it is not silently marked PASS.
+
+**Verified locally on 2026-11-17:** Python 3.13.5, Linux sandbox, 14/14 CLI cases PASS, 0 blocked. The original source and tested copies were matched to GitHub blob SHA-1. This validates only the Python audit behavior on that host, **not** actual Unreal gameplay or Windows execution.
+
 ## What the script actually does
 
 1. Reads an **existing, nonempty JSON manifest** with schema_version=1, a nonempty artifacts list and nonempty tests list.
