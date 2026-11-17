@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-17 — Source audit, real Python tests and safer Unreal/PowerShell examples
+
+- Published the [source-level technical audit](docs/audits/2026-11-17-static-source-audit.md), including 75/75 local Markdown file-link checks (0 unresolved relative paths) and explicit Windows/UE/Blender blockers.
+- Fixed native Blueprint authoring declarations for T05 Character/Beacon and T09 UI Controller; corrected T09 pause input mode, SoundMix EndPlay ownership and PIE-prefix-free saved MapId.
+- Made the T07 optional SaveGame JSON evidence report create-new-only and unable to write directly within the SaveGames directory.
+- Updated the T14 blockout Editor Python from deprecated EditorLevelLibrary world lookup to UnrealEditorSubsystem.
+- Added and actually ran the [T20 Python verifier's 14-case CLI regression suite](examples/glass-box-audit/tests/test_evidence_auditor.py), against exact GitHub-blob-matching source copies using Python 3.13.5: **14/14 PASS**, **0 BLOCKED** in the local Linux audit runtime.
+- **Unrun gates:** Unreal Engine 5.9 UHT/UBT/Blueprint/PIE/packaging, Blender, PowerShell 7/Windows execution and human game acceptance remain NOT RUN/BLOCKED, not upgraded by static source fixes.
+
+
 ## 2026-11-16 — T20: Glass Box, source provenance and evidence-based postmortem
 
 - Published [T20](tutorials/glass-box-provenance-postmortem.md), covering decisions, AI participation, artifact rights, exact execution states, private/public boundaries, failures, scope cuts, factual postmortem and 27 acceptance checks.
