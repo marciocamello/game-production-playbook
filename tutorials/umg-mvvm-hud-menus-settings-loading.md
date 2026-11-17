@@ -135,7 +135,7 @@ In Controls, call `GetActiveControlBindings()` on WBP creation or when shown and
 
 ## 6. Menu focus and pause correctness
 
-The controller's screen switch code creates the required WBP, removes the prior screen, calls `SetGamePaused(true)`, sets `FInputModeUIOnly` focused on that widget, and enables the mouse cursor. `ReturnToGame` removes the menu, unpauses, restores `FInputModeGameOnly` and hides the cursor.
+The controller's screen switch code creates the required WBP, removes the prior screen, calls `SetGamePaused(true)`, sets `FInputModeGameAndUI` focused on that widget, and enables the mouse cursor. `ReturnToGame` removes the menu, unpauses, restores `FInputModeGameOnly` and hides the cursor.
 
 The existing **Escape** key binding opens/closes Pause during gameplay. When UI-only input is active, a Widget may consume keys before Controller input, so the actual **Resume and Back buttons are mandatory** and must be keyboard/gamepad navigable in the authored WBP. If supporting Escape-in-menu, handle its input in the widget (with explicit real routing) rather than assuming the Controller receives it in every focus mode.
 
@@ -252,7 +252,7 @@ Acceptance evidence should cite source revision, actual Engine build, the assign
 | FieldNotify property not listed | Verify `UMG Viewmodel` plugin, `ModelViewViewModel` dependency, correct UHT and Blueprint exposure |
 | C++ ViewModel exists but HUD stays blank | Author WBP and View Bindings, assign the one live ViewModel instance; inspect initialization order |
 | HUD reads Owned while actual personal Light is donated | T05 Character and T07 Run are competing; consolidate authority and reconcile GAS |
-| Pause menu opens but cannot resume | Verify UI-only focus, actual Resume/Back event and PlayerController class |
+| Pause menu opens but cannot resume | Verify Game-and-UI focus, actual Resume/Back event and PlayerController class |
 | Esc unpauses only sometimes | Input routing depends on game-only/UI-only modes; handle widget's menu keys explicitly |
 | Saving overlay disappears immediately | Someone is confusing command acceptance with async callback; only completion event dismisses it |
 | Continue opens wrong or empty world | Restore logical data + map/stream/checkpoint + Actors/GAS before showing gameplay |
