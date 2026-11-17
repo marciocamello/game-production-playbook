@@ -12,7 +12,7 @@ The [Editor Python script](scripts/author_walkable_blockout.py) creates **seven 
    - `GPP_BLOCKOUT_MAP`: real loaded level's asset name (e.g. `L_TrainingBlockout`).
    - `GPP_BLOCKOUT_PREFIX`: a unique, approved actor prefix ending in underscore, e.g. `GPP_Training_`.
 
-3. Verify the installed Python Editor Script Plugin, Editor Actor Subsystem and built-in Engine Cube are available.
+3. Verify the installed Python Editor Script Plugin, **Unreal Editor Subsystem**, Editor Actor Subsystem and built-in Engine Cube are available. The script obtains its world from `unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world()`, not the deprecated `EditorLevelLibrary`.
 4. Run the Python script through the **Unreal Editor** supported Python execution route. It refuses a mismatched loaded level or any existing Actor whose label starts with that prefix.
 5. Check the **seven created actor labels**, mesh assignments, dimensions, collision and positions. The layout has a plaza, a 220 cm wide connecting walkway, real structural side walls and a recovery platform.
 6. Save the **authorized map** using Unreal Editor after inspecting any dirty packages. The script itself does not Save All and does not remove any Actor.
