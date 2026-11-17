@@ -137,7 +137,7 @@ In Controls, call `GetActiveControlBindings()` on WBP creation or when shown and
 
 The controller's screen switch code creates the required WBP, removes the prior screen, calls `SetGamePaused(true)`, sets `FInputModeGameAndUI` focused on that widget, and enables the mouse cursor. `ReturnToGame` removes the menu, unpauses, restores `FInputModeGameOnly` and hides the cursor.
 
-The existing **Escape** key binding opens/closes Pause during gameplay. When UI-only input is active, a Widget may consume keys before Controller input, so the actual **Resume and Back buttons are mandatory** and must be keyboard/gamepad navigable in the authored WBP. If supporting Escape-in-menu, handle its input in the widget (with explicit real routing) rather than assuming the Controller receives it in every focus mode.
+The existing **Escape** key binding opens/closes Pause during gameplay. Under Game-and-UI input, a widget gets the first chance to handle a key and **unhandled Escape reaches the Controller's pause binding** (configured to execute when paused). The authored **Resume and Back buttons remain mandatory** and must be keyboard/gamepad navigable. Test Escape with both an unhandled focused widget and a focused control that consumes the key.
 
 Opening any screen resets the existing T08 sprint speed via `ResetSprint()`, avoiding the common case where an input release never arrives after UI focus changes. If the target game uses another pawn or GAS-driven sprint, call that real speed authority instead.
 
