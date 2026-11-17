@@ -1,14 +1,14 @@
 # Documentation Link Review — v1.0.0
 
 **Review date:** 2026-11-17
-**Scope:** All 76 Markdown documents present before this review's release-note additions, including tutorials T01–T20, 197-step roadmap, examples, templates, license/provenance pages and case study.
+**Scope:** All 76 Markdown documents present at the start of this release review, and the full final set of 78 Markdown documents after adding this audit and release notes, including T01–T20, the 197-step roadmap, examples, templates, licenses/provenance and case study.
 **Release edition:** [Game Production Playbook v1.0.0](../releases/v1.0.0.md) — **documentation release only**.
 **Method:** inspect exact Markdown source on public GitHub; inventory external HTTP(S) references; inspect known local fragments; independently retrieve/search authoritative external pages using a browser/search tool; correct confirmed outdated or unreliable destinations. This was not a continuous network/HTTP-status monitor.
 
 ## Result and evidence levels
 
 - **Published scope:** all 20 tutorial pages and the 197-item roadmap remain present.
-- **Internal paths:** the earlier [static source audit](2026-11-17-static-source-audit.md) checked 75/75 then-existing Markdown documents, with no unresolved relative file/directory links. The present review inspected the newly added documentation and changed links; this is not a claim that a complete new 76-page HTTP/anchor regression tool was executed.
+- **Internal paths:** after v1.0.0 release notes, audit links and index updates were committed, the final GitHub tree was independently re-read at commit `a9344d31a9e1a8d3278393174a9d4c229757bf8a`. **78/78 Markdown documents and 578 relative Markdown file/directory references** were checked against all current GitHub tree paths: **0 unresolved local paths**. This was a source-level path-resolution audit, not a rendered-browser click test or external HTTP-status monitor. The earlier [static source audit](2026-11-17-static-source-audit.md) separately verified its own baseline.
 - **Internal Markdown fragments:** one explicit repository-relative anchor was found in the reviewed Markdown source: `examples/savegame-ab/README.md` links to `tutorials/savegame-reload-world-partition.md#11-exact-humanautomated-acceptance-scenarios`. The target heading `## 11. Exact human/automated acceptance scenarios` exists and generates that GitHub-style anchor.
 - **External authoritative documentation:** relevant documentation for Unreal Engine, Blender, Git, the Model Context Protocol, Creative Commons, OBS and FFmpeg was retrieved or found in the publisher's search-indexed source. **Direct retrieval** and **search-index evidence** are distinguished below; an indexed result does not prove the live server returned HTTP 200 to every client.
 - **Confirmed reference fixes:** three links were updated in their real tutorial files (see table).
