@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-17 — Documentation Edition v1.0.0
+
+- Established [VERSION](VERSION) = `1.0.0` and published [v1.0.0 editorial release notes](docs/releases/v1.0.0.md) for the original complete scope: 20 tutorials, 197 reference steps, three production modes, reusable templates, source examples and case-study/evidence guides.
+- Reviewed the external documentation used across the 76 Markdown source pages and verified official references where directly accessible or indexed by their publishers; recorded the [external links and anchor audit](docs/audits/2026-11-17-documentation-links-v1.0.0.md), including network-intermediary limits and one internal heading-anchor check.
+- Replaced the outdated/unreliable Project Launcher deep-link in T19; the unreliable camera API deep-link in T08 with the official camera C++ example; and the older Enhanced Input API prefix in T09 with the official canonical API page.
+- **This release is documentary, not an executable game release.** Local Python auditor 14/14 is the only previously evidenced executed helper suite. Unreal 5.9 UHT/UBT, PIE, Blender, Windows PowerShell, packaging and human gameplay gates remain NOT RUN/blocked by the audit environment.
+- No GitHub Actions or unauthorised PRs. A Git tag and GitHub Releases entry are separate objects, not implied by the published VERSION file.
+
+
 ## 2026-11-17 — Source audit, real Python tests and safer Unreal/PowerShell examples
 
 - Published the [source-level technical audit](docs/audits/2026-11-17-static-source-audit.md), including 75/75 local Markdown file-link checks (0 unresolved relative paths) and explicit Windows/UE/Blender blockers.
