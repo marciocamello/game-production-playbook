@@ -87,6 +87,12 @@ void AGPPDemoUIController::EndPlay(const EEndPlayReason::Type Reason)
         RunSubsystem->OnProgressChanged.RemoveDynamic(this, &AGPPDemoUIController::HandleProgressChanged);
         RunSubsystem->OnSaveCompleted.RemoveDynamic(this, &AGPPDemoUIController::HandleSaveCompleted);
     }
+    // Avoid leaking this controller's pushed mix into a later game/menu world.
+    if (bSoundMixActivated && MasterSoundMix)
+    {
+        UGameplayStatics::PopSoundMixModifier(this, MasterSoundMix);
+        bSoundMixActivated = false;
+    }
     Super::EndPlay(Reason);
 }
 
@@ -152,8 +158,12 @@ bool AGPPDemoUIController::ShowScreen(EGPPDemoScreen Next, TSubclassOf<UUserWidg
     }
 
     UGameplayStatics::SetGamePaused(this, true);
-    FInputModeUIOnly InputMode;
+    // The controller owns the Escape binding. UIOnly prevents that binding
+    // from receiving keys; GameAndUI lets unhandled keys reach the controller.
+    // The world is paused below, so ordinary gameplay actions cannot progress.
+    FInputModeGameAndUI InputMode;
     InputMode.SetWidgetToFocus(NewScreen->TakeWidget());
+    InputMode.SetHideCursorDuringCapture(false);
     SetInputMode(InputMode);
     bShowMouseCursor = true;
     return true;
