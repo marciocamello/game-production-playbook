@@ -2,7 +2,7 @@
 
 **A practical, evidence-driven guide to making games from idea to release — manually, with AI assistance, or through AI-driven production.**
 
-**Series publication: 20 of 20 practical technical tutorials published.** Published means written guidance/source is available, not that Unreal/Blender examples have been run or game acceptance achieved.
+**Documentation edition: [v1.0.0](docs/releases/v1.0.0.md), dated 2026-11-17.** All **20 of 20** practical tutorials are published. [VERSION](VERSION) is the canonical edition number. Published documentation/source does **not** assert a UE/Blender runtime pass, a packaged game, or human gameplay acceptance.
 
 This repository teaches an end-to-end production system rather than a collection of prompts. It grew out of the planning, execution, mistakes, corrections, and scope decisions of *The Unmade*, a project developed for Epic AI MegaJam 2026 using Unreal Engine 5.9, C++, Blueprints, Blender, and multiple AI-assisted workflows.
 
@@ -85,6 +85,10 @@ All three use the **same gates**: approved intent → design → executable spec
 - **Ship the smallest coherent game.** Protect the executable, save/load, controls, critical route, finale and delivery requirements before optional polish.
 - **Reproducible, privacy-safe examples.** Use repository-relative paths, no personal machine locations, no credentials, and no proprietary Engine source.
 - **No hosted CI or GitHub Actions.** Examples use local execution and explicit evidence.
+
+## Documentation link and version review
+
+The [v1.0.0 external-link and anchor review](docs/audits/2026-11-17-documentation-links-v1.0.0.md) identified and corrected three unreliable/outdated official reference destinations and recorded what could be checked directly versus search-indexed. Some documentation sites restrict automated access; an intermediary error is not necessarily a broken page. See the [v1.0.0 release notes](docs/releases/v1.0.0.md) for scope and explicit execution boundaries.
 
 ## Audits and executable evidence
 
