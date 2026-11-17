@@ -13,8 +13,8 @@ class USoundClass;
 enum class EGPPDemoScreen : uint8 { None, Main, Pause, Options, Controls };
 
 // Existing T07 progress drives HUD; real UMG buttons call these operational commands.
-UCLASS()
-class AGPPDemoUIController final : public APlayerController
+UCLASS(Blueprintable)
+class AGPPDemoUIController : public APlayerController
 {
     GENERATED_BODY()
 
