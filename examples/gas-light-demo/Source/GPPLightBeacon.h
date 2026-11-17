@@ -9,8 +9,8 @@ class USceneComponent;
 class UStaticMeshComponent;
 
 // One in-level example beacon. Its visual state is projected by the Character's run state.
-UCLASS()
-class AGPPLightBeacon final : public AActor
+UCLASS(Blueprintable)
+class AGPPLightBeacon : public AActor
 {
     GENERATED_BODY()
 
