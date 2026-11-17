@@ -68,7 +68,7 @@ Menu input: the controller binds Escape to `TogglePause` in the game. UMG uses G
 
 ## 6. New Game, Save and Continue boundaries
 
-**New Game:** The main menu starts with the real level already loaded and the real Default Pawn possessed. `StartNewGame()` calls the existing `StartNewRun(MapId, CheckpointId, PawnLocation)` once, and only transitions into gameplay on success. It refuses an active run. The example intentionally does not overwrite progress from a running session.
+**New Game:** The main menu starts with the real level already loaded and the real Default Pawn possessed. `StartNewGame()` obtains the current level's **prefix-free** name with `UGameplayStatics::GetCurrentLevelName(this, true)` before calling the existing `StartNewRun(MapId, CheckpointId, PawnLocation)` once, and only transitions into gameplay on success. It refuses an active run. The example intentionally does not overwrite progress from a running session.
 
 **Save:** A pause-menu button calls the existing `RequestAsyncSave()`. The ViewModel shows `Saving...` only for an accepted request. It waits for the actual `OnSaveCompleted(bool)` event, clears the overlay and reports either `Save verified` or a failure. This does not prove that the scene can be restored without the rest of T07's map/Actor integration.
 
