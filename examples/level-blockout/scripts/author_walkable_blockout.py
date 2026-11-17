@@ -17,7 +17,8 @@ def main():
     if not re.fullmatch(r"GPP_[A-Za-z][A-Za-z0-9_]*_", prefix):
         raise RuntimeError("Use an owned label prefix, e.g. GPP_Training_.")
 
-    world = unreal.EditorLevelLibrary.get_editor_world()
+    # EditorLevelLibrary is deprecated; use the installed Editor subsystem.
+    world = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world()
     if not world or world.get_name() != expected_map:
         raise RuntimeError("Wrong Unreal Editor world. Refusing level changes.")
 
