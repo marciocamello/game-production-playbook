@@ -16,7 +16,7 @@ Official documentation reviewed November 16, 2026:
 - [Epic — UMG UI Designer](https://dev.epicgames.com/documentation/unreal-engine/umg-ui-designer-for-unreal-engine): Widget Blueprints, hierarchy, events and layout.
 - [Epic — UGameUserSettings](https://dev.epicgames.com/documentation/en-us/unreal-engine/API/Runtime/Engine/UGameUserSettings): applying, saving, quality and display properties.
 - [Epic — Enhanced Input](https://dev.epicgames.com/documentation/unreal-engine/enhanced-input-in-unreal-engine): Mapping Contexts, Input Actions, user mappings and runtime input.
-- [Epic — UEnhancedPlayerInput::GetEnhancedActionMappingsView](https://dev.epicgames.com/documentation/en-us/unreal-engine/API/Plugins/EnhancedInput/UEnhancedPlayerInput/GetEnhancedActionMappingsView): read-only current mapped controls.
+- [Epic — UEnhancedPlayerInput::GetEnhancedActionMappingsView](https://dev.epicgames.com/documentation/unreal-engine/API/Plugins/EnhancedInput/UEnhancedPlayerInput/GetEnhancedActionMappingsView): read-only current mapped controls.
 - [Epic — UGameplayStatics](https://dev.epicgames.com/documentation/en-us/unreal-engine/API/Runtime/Engine/UGameplayStatics): pause, SoundMix override and subtitles.
 - [T05 — GAS Light example](gameplay-gas-tags-light.md), [T07 — SaveGame/World Partition](savegame-reload-world-partition.md), [T08 — Camera & Enhanced Input](camera-rigs-occlusion-enhanced-input.md).
 
