@@ -201,9 +201,11 @@ bool AGPPDemoUIController::StartNewGame()
         return false;
     }
 
-    // Start at the actual possessed pawn's position in the currently loaded level.
-    if (!RunSubsystem->StartNewRun(GetWorld()->GetFName(),
-                                   FName(TEXT("GPP_Start")), GetPawn()->GetActorLocation()))
+    // Persist a stable map name: PIE World names can carry UEDPIE prefixes
+    // that do not exist in packaged/standalone map names.
+    const FName MapId(*UGameplayStatics::GetCurrentLevelName(this, true));
+    if (MapId.IsNone() || !RunSubsystem->StartNewRun(
+            MapId, FName(TEXT("GPP_Start")), GetPawn()->GetActorLocation()))
     {
         return false;
     }
