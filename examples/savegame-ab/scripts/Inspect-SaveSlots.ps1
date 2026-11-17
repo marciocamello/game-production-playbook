@@ -77,7 +77,7 @@ if (-not [string]::IsNullOrWhiteSpace($OutputJson)) {
     }
     # Reports must not be created inside the game's SaveGames directory.
     # This also protects the .sav namespace from accidental report placement.
-    $safeSaveRoot = [System.IO.Path]::GetFullPath($directory).TrimEnd([char]'\\', [char]'/')
+    $safeSaveRoot = [System.IO.Path]::GetFullPath($directory).TrimEnd([char]'\', [char]'/')
     if ($outPath.Equals($safeSaveRoot, [System.StringComparison]::OrdinalIgnoreCase) -or
         $outPath.StartsWith($safeSaveRoot + [System.IO.Path]::DirectorySeparatorChar, [System.StringComparison]::OrdinalIgnoreCase)) {
         throw 'OutputJson must be outside the SaveGame directory.'
