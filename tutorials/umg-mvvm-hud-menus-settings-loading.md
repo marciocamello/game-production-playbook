@@ -135,6 +135,8 @@ In Controls, call `GetActiveControlBindings()` on WBP creation or when shown and
 
 ## 6. Menu focus and pause correctness
 
+The C++ example now uses a PIE-prefix-free `GetCurrentLevelName` when persisting the starting MapId, avoiding an Editor-only world name in SaveGame. It still **does not** implement the complete T07 Continue/map-streaming coordinator.
+
 The controller's screen switch code creates the required WBP, removes the prior screen, calls `SetGamePaused(true)`, sets `FInputModeGameAndUI` focused on that widget, and enables the mouse cursor. `ReturnToGame` removes the menu, unpauses, restores `FInputModeGameOnly` and hides the cursor.
 
 The existing **Escape** key binding opens/closes Pause during gameplay. Under Game-and-UI input, a widget gets the first chance to handle a key and **unhandled Escape reaches the Controller's pause binding** (configured to execute when paused). The authored **Resume and Back buttons remain mandatory** and must be keyboard/gamepad navigable. Test Escape with both an unhandled focused widget and a focused control that consumes the key.
