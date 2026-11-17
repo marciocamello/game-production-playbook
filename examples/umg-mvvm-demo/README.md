@@ -50,7 +50,7 @@ To make volume audible rather than a text-only slider:
 
 1. Author a **real** `SoundClass` for game audio (master class) and route actual music, ambience and SFX under it or to child SoundClasses.
 2. Author a **real** `SoundMix` and assign both sound assets to the controller properties `MasterSoundMix` and `MasterSoundClass`.
-3. The native function pushes its SoundMix once per controller lifetime and calls `SetSoundMixClassOverride` for subsequent slider changes, avoiding repeated modifier pushes. It persists volume in the platform's `GameUserSettings` INI through `GConfig`.
+3. The native function pushes its SoundMix once per controller lifetime and calls `SetSoundMixClassOverride` for subsequent slider changes, avoiding repeated modifier pushes. The controller releases its SoundMix modifier at EndPlay to avoid leaking a mix across controllers. It persists volume in the platform's `GameUserSettings` INI through `GConfig`.
 4. Confirm sound playing at volume 1.0 is audible and volume 0.0 is effectively silent, without muting unrelated audio routes unintentionally.
 5. Restart the game in a fresh process and verify the saved volume is reapplied. A missing SoundClass/Mix causes the function to return `false`, not fake a success.
 
@@ -64,7 +64,7 @@ To make volume audible rather than a text-only slider:
 - `GetActiveControlBindings()`: reads **current resolved mappings** from `UEnhancedPlayerInput`, rather than listing guessed keys. It supplies a Controls **viewer**, not remapping. Do not place fake “Rebind” controls in this example.
 - **Resolution/fullscreen changes are intentionally not supplied** by this source: they require a safe confirmation/revert flow and a fresh-process check. Do not add unimplemented resolution selectors.
 
-Menu input: the controller binds Escape to `TogglePause` in the game. UMG is given UI-only input while a menu is visible, so **Resume/Back buttons must work independently**; do not assume Escape will always reach game input in a UI-only mode. More comprehensive keyboard/gamepad navigation and remapping must be integrated and tested to satisfy a production game's accessibility/rebinding contract.
+Menu input: the controller binds Escape to `TogglePause` in the game. UMG uses Game-and-UI input while a menu is visible so unhandled Escape can reach the existing Controller binding even during pause; **Resume/Back buttons must still work independently**, including mouse/keyboard/gamepad focus. More comprehensive keyboard/gamepad navigation and remapping must be integrated and tested to satisfy a production game's accessibility/rebinding contract.
 
 ## 6. New Game, Save and Continue boundaries
 
