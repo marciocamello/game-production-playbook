@@ -15,7 +15,7 @@ Official documentation reviewed for this tutorial:
 - [Epic — ETriggerEvent API](https://dev.epicgames.com/documentation/en-us/unreal-engine/API/Plugins/EnhancedInput/ETriggerEvent): `Started`, `Triggered`, `Completed`, `Canceled`.
 - [Epic — Gameplay Camera System Overview](https://dev.epicgames.com/documentation/unreal-engine/gameplay-camera-system-overview): Camera Assets, rigs, Camera Director and transitions; feature documented as **Experimental**.
 - [Epic — Gameplay Camera System Quick Start](https://dev.epicgames.com/documentation/unreal-engine/gameplay-camera-system-quick-start): a concrete Editor authoring workflow.
-- [Epic — APlayerController::SetViewTargetWithBlend](https://dev.epicgames.com/documentation/en-us/unreal-engine/API/Runtime/Engine/GameFramework/APlayerController/SetViewTargetWithBlend): switching view targets and transition parameters.
+- [Epic — APlayerController::SetViewTargetWithBlend](https://dev.epicgames.com/documentation/unreal-engine/quick-start-guide-to-implementing-automatic-camera-control-in-unreal-engine-cpp): switching view targets and transition parameters.
 - [T05 — Gameplay C++, Gameplay Tags and GAS](gameplay-gas-tags-light.md) and the existing [Unreal local build guide](unreal-project-bootstrap-local-build.md).
 
 Epic pages can display a default documentation version other than the Engine build on your machine. Check the actual installed UE **5.9** headers, plugin availability, Editor toolsets and asset types before assuming an API works. Gameplay Cameras must be tested with the installed plugin/version if selected for shipping.
