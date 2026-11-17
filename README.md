@@ -86,6 +86,10 @@ All three use the **same gates**: approved intent → design → executable spec
 - **Reproducible, privacy-safe examples.** Use repository-relative paths, no personal machine locations, no credentials, and no proprietary Engine source.
 - **No hosted CI or GitHub Actions.** Examples use local execution and explicit evidence.
 
+## Audits and executable evidence
+
+The [2026-11-17 source and documentation audit](docs/audits/2026-11-17-static-source-audit.md) examined the 20 tutorials, 197-step roadmap, 75 Markdown link destinations and the original source examples. It records targeted source corrections, a real [14-case local Python CLI regression result](examples/glass-box-audit/tests/test_evidence_auditor.py), and **explicitly unrun** Windows, Blender, Unreal UBT/PIE/packaged checks. Publication or source inspection is not a gameplay acceptance claim.
+
 ## Case-study integrity
 
 The original jam repository is not mirrored here. Public case-study material is a selective, rewritten account of **documented decisions and available implementation reports**. Historical specs sometimes predate later execution reports; the study distinguishes planned, implemented, tested, human-validated and actually released work. Unknown results remain unknown. Missing or unaudited evidence is not a PASS.
