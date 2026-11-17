@@ -77,7 +77,7 @@ pwsh -File ./examples/savegame-ab/scripts/Inspect-SaveSlots.ps1 \
     -SlotNames 'GPP_Run_A','GPP_Run_B'
 ```
 
-For a separate JSON file, first create/select an existing writable report directory and pass `-OutputJson './artifacts/save-slot-evidence.json'`. The tool **does not delete, change, deserialize or validate** Unreal save slots. It reports only file-level evidence. A successful hash alone does not establish a valid game state.
+For a separate JSON file, first create/select an existing writable report directory **outside SaveGames** and pass `-OutputJson './artifacts/save-slot-evidence.json'`. The inspector refuses to overwrite an existing report and uses an atomic create-new operation. The tool **does not delete, change, deserialize or validate** Unreal save slots. It reports only file-level evidence. A successful hash alone does not establish a valid game state.
 
 ## Failure cases and exact recovery expectation
 
