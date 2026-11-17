@@ -75,17 +75,38 @@ if (-not [string]::IsNullOrWhiteSpace($OutputJson)) {
     if (-not (Test-Path -LiteralPath $outParent -PathType Container)) {
         throw "Output parent directory does not exist: $outParent"
     }
-    if ([string]::Equals($outPath, $directory, [System.StringComparison]::OrdinalIgnoreCase)) {
-        throw 'OutputJson must name a file, not the save directory.'
+    # Reports must not be created inside the game's SaveGames directory.
+    # This also protects the .sav namespace from accidental report placement.
+    $safeSaveRoot = [System.IO.Path]::GetFullPath($directory).TrimEnd([char]'\\', [char]'/')
+    if ($outPath.Equals($safeSaveRoot, [System.StringComparison]::OrdinalIgnoreCase) -or
+        $outPath.StartsWith($safeSaveRoot + [System.IO.Path]::DirectorySeparatorChar, [System.StringComparison]::OrdinalIgnoreCase)) {
+        throw 'OutputJson must be outside the SaveGame directory.'
     }
     $payload = [pscustomobject]@{
         CapturedUtc = [DateTime]::UtcNow.ToString('o')
         SlotEvidence = $results
     }
 
-    # Never write to a SaveGame slot. This optional file is a separate evidence report.
-    $payload | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath $outPath -Encoding utf8
-    Write-Host "Evidence report written: $outPath"
+    # FileMode.CreateNew atomically refuses an existing report. Set-Content
+    # would silently overwrite it and violates the read-only evidence contract.
+    $json = $payload | ConvertTo-Json -Depth 6
+    $stream = [System.IO.File]::Open($outPath, [System.IO.FileMode]::CreateNew,
+        [System.IO.FileAccess]::Write, [System.IO.FileShare]::None)
+    try {
+        $writer = [System.IO.StreamWriter]::new(
+            $stream, [System.Text.UTF8Encoding]::new($false))
+        try {
+            $writer.Write($json)
+            $writer.Flush()
+        }
+        finally {
+            $writer.Dispose()
+        }
+    }
+    finally {
+        $stream.Dispose()
+    }
+    Write-Host "Evidence report created without overwrite: $outPath"
 }
 
 Write-Host 'Only file-level evidence was inspected; gameplay consistency must be tested in Unreal.'
