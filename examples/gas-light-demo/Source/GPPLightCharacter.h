@@ -25,8 +25,8 @@ enum class EGPPLightStage : uint8
     Recovered
 };
 
-UCLASS()
-class AGPPLightCharacter final : public ACharacter, public IAbilitySystemInterface
+UCLASS(Blueprintable)
+class AGPPLightCharacter : public ACharacter, public IAbilitySystemInterface
 {
     GENERATED_BODY()
 
